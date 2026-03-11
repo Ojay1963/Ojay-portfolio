@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Button from '../components/Button.jsx'
 import ProjectCard from '../components/ProjectCard.jsx'
 import SectionTitle from '../components/SectionTitle.jsx'
@@ -32,10 +32,14 @@ const projects = [
   {
     title: 'Delxta',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Payments'],
+    role: 'Lead Full Stack Build',
+    timeline: 'End-to-end product build',
     description:
       'A restaurant platform where customers can reserve tables, place delivery orders, pay online, and schedule meals in advance for dine-in.',
     problem:
       'The product needed to combine restaurant seating, online ordering, and payment in one flow, so customers can book ahead, pay, order for delivery, or prepare meals before arriving.',
+    outcome:
+      'Shows a stronger product-thinking case study than a standard CRUD app because reservations, ordering, and payments work inside one customer journey.',
     highlights: [
       'Table reservation flow for customers planning to dine in',
       'Ordering and payment flow for delivery and advance meal requests',
@@ -49,10 +53,14 @@ const projects = [
   {
     title: 'Pro-Find',
     tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Payments'],
+    role: 'Marketplace Product Build',
+    timeline: 'Multi-role listing workflow',
     description:
       'An open real estate marketplace where agents and property owners can pay to list properties for house hunters to discover.',
     problem:
       'The product needed to support two-sided marketplace activity: paid property listings from agents or owners, and a clean search experience for people looking for homes.',
+    outcome:
+      'Demonstrates marketplace architecture, paid listing flows, and a cleaner search experience for users browsing property inventory.',
     highlights: [
       'Listing flow for agents and property owners to publish properties',
       'Property discovery experience designed for house hunters',
@@ -66,10 +74,14 @@ const projects = [
   {
     title: 'Cars',
     tags: ['React', 'JavaScript', 'CSS', 'UI', 'Catalog'],
+    role: 'Frontend Interface Project',
+    timeline: 'Responsive UI exercise',
     description:
       'A car-focused browsing experience for exploring vehicles, comparing options, and presenting listings in a clean interface.',
     problem:
       'The goal was to make vehicle discovery easier with a layout that helps users scan available cars quickly and understand each listing clearly.',
+    outcome:
+      'Works best as a presentation project that highlights interface structure, listing clarity, and responsive browsing patterns.',
     highlights: [
       'Responsive listing layout for browsing multiple vehicles',
       'Clear presentation of vehicle details and pricing information',
@@ -82,10 +94,14 @@ const projects = [
   {
     title: 'Tax Calculator',
     tags: ['JavaScript', 'HTML', 'CSS', 'Logic', 'Forms'],
+    role: 'Utility App',
+    timeline: 'Fast single-purpose tool',
     description:
       'A utility app for calculating tax values from user input with fast feedback and a simple, readable interface.',
     problem:
       'The focus was to turn manual tax calculations into a straightforward tool that reduces errors and gives users results immediately.',
+    outcome:
+      'Adds range to the portfolio by showing practical form handling, validation, and calculation logic beyond larger app builds.',
     highlights: [
       'Form-driven calculator with clear user inputs and outputs',
       'JavaScript logic for handling tax computation rules',
@@ -162,21 +178,11 @@ const contactItems = [
   { label: 'LinkedIn', value: 'linkedin.com/in/onos-eloho-7703a0aa', href: linkedInProfile },
 ]
 
-function Home({ scrollTo }) {
+function Home() {
   const [formValues, setFormValues] = useState({ name: '', email: '', message: '' })
   const [errors, setErrors] = useState({})
   const [statusMessage, setStatusMessage] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
-
-  useEffect(() => {
-    if (!scrollTo) return
-    const target = document.getElementById(scrollTo)
-    if (target) {
-      setTimeout(() => {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }, 100)
-    }
-  }, [scrollTo])
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -245,11 +251,11 @@ function Home({ scrollTo }) {
             Onos Jephtha <br />
             Eloho
           </h1>
-          <p className="hero-role">Full Stack Developer</p>
+          <p className="hero-role">I build full stack products that people can actually use.</p>
           <p className="hero-text">
-            Hi, I&apos;m Onos Eloho, a Full-Stack Developer specializing in React and Node.js. I build
-            modern web applications with strong frontend experiences, reliable backend systems, and clean
-            database integration.
+            I&apos;m Onos Eloho, a full stack JavaScript developer focused on React and Node.js. I design
+            and ship booking flows, marketplace experiences, dashboards, and APIs with clean frontend UX
+            and reliable backend structure.
           </p>
           <div className="tag-row">
             {heroTags.map((tag) => (
@@ -257,11 +263,11 @@ function Home({ scrollTo }) {
             ))}
           </div>
           <div className="hero-actions">
-            <Button to="/projects" variant="primary">
-              View Projects
+            <Button href="#projects" variant="primary">
+              See My Work
             </Button>
-            <Button href={githubProfile} variant="ghost">
-              GitHub Profile
+            <Button href="#contact" variant="ghost">
+              Let&apos;s Work Together
             </Button>
           </div>
           <div className="social-row">
@@ -339,8 +345,8 @@ function Home({ scrollTo }) {
                 <Button href={githubProfile} variant="primary">
                   View GitHub Profile
                 </Button>
-                <Button to="/contact" variant="ghost">
-                  Request Walkthrough
+                <Button href="#contact" variant="ghost">
+                  Request a Walkthrough
                 </Button>
               </div>
             </div>

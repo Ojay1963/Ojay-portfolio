@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 function ProjectCard({ project }) {
   const [imageFailed, setImageFailed] = useState(false)
+  const codeLabel = project.githubLabel || 'View Code'
 
   return (
     <article className="project-card glass fade-in">
@@ -23,6 +24,11 @@ function ProjectCard({ project }) {
         </div>
       )}
       <h3 className="project-title">{project.title}</h3>
+      {(project.role || project.timeline) && (
+        <p className="project-meta">
+          {[project.role, project.timeline].filter(Boolean).join(' | ')}
+        </p>
+      )}
       <div className="project-tags">
         {project.tags.map((tag) => (
           <Tag key={tag}>{tag}</Tag>
@@ -30,6 +36,7 @@ function ProjectCard({ project }) {
       </div>
       <p className="project-desc">{project.description}</p>
       <p className="project-problem">{project.problem}</p>
+      {project.outcome && <p className="project-outcome">{project.outcome}</p>}
       <ul className="project-highlights">
         {project.highlights.map((item) => (
           <li key={item}>{item}</li>
@@ -44,7 +51,7 @@ function ProjectCard({ project }) {
           )}
           {project.github && (
             <Button href={project.github} variant="ghost">
-              View Code
+              {codeLabel}
             </Button>
           )}
         </div>

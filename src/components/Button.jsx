@@ -12,8 +12,16 @@ function Button({ to, href, variant = 'primary', children, className = '', ...re
   }
 
   if (href) {
+    const isHashLink = href.startsWith('#')
+
     return (
-      <a href={href} className={classes} target="_blank" rel="noreferrer" {...rest}>
+      <a
+        href={href}
+        className={classes}
+        target={isHashLink ? undefined : '_blank'}
+        rel={isHashLink ? undefined : 'noreferrer'}
+        {...rest}
+      >
         {children}
       </a>
     )
