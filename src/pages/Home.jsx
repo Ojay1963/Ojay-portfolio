@@ -9,7 +9,7 @@ import ojCorporate from '../components/images/Oj Corporate.jpg'
 
 const contactEmail = 'ojaydev2010@gmail.com'
 const githubProfile = 'https://github.com/Ojay1963'
-const linkedInProfile = 'https://www.linkedin.com/in/onoseloho/'
+const linkedInProfile = 'https://www.linkedin.com/in/onos-eloho-7703a0aa'
 
 const heroTags = ['React', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Tailwind', 'CI']
 
@@ -44,9 +44,10 @@ const projects = [
     imageSrc: 'https://image.thum.io/get/png/noanimate/width/1200/https://delxta.vercel.app',
     imageAlt: 'Screenshot preview of the Delxta restaurant website',
     demo: 'https://delxta.vercel.app',
+    github: githubProfile,
   },
   {
-    title: 'ProFind Real Estate Marketplace',
+    title: 'Pro-Find',
     tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Payments'],
     description:
       'An open real estate marketplace where agents and property owners can pay to list properties for house hunters to discover.',
@@ -60,20 +61,39 @@ const projects = [
     imageSrc: 'https://image.thum.io/get/png/noanimate/width/1200/https://pro-find-nxw1.vercel.app',
     imageAlt: 'Screenshot preview of the ProFind real estate marketplace',
     demo: 'https://pro-find-nxw1.vercel.app',
+    github: githubProfile,
   },
   {
-    title: 'Admin Dashboard and API',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Charts'],
+    title: 'Cars',
+    tags: ['React', 'JavaScript', 'CSS', 'UI', 'Catalog'],
     description:
-      'An operations dashboard for monitoring application data, managing records, and surfacing trends through API-backed visualizations.',
-    problem: 'The goal was to turn raw CRUD data into a dashboard that is easier to monitor and manage day to day.',
+      'A car-focused browsing experience for exploring vehicles, comparing options, and presenting listings in a clean interface.',
+    problem:
+      'The goal was to make vehicle discovery easier with a layout that helps users scan available cars quickly and understand each listing clearly.',
     highlights: [
-      'Role-protected admin screens and API endpoints',
-      'Dashboard widgets backed by live REST data',
-      'Cleaner decision-making through charts and summary blocks',
+      'Responsive listing layout for browsing multiple vehicles',
+      'Clear presentation of vehicle details and pricing information',
+      'Frontend structure focused on discoverability and visual clarity',
     ],
     image:
-      'linear-gradient(135deg, rgba(24, 32, 52, 0.95), rgba(24, 32, 52, 0.5)), url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80)',
+      'linear-gradient(135deg, rgba(32, 36, 52, 0.94), rgba(12, 16, 28, 0.56)), url(https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80)',
+    github: githubProfile,
+  },
+  {
+    title: 'Tax Calculator',
+    tags: ['JavaScript', 'HTML', 'CSS', 'Logic', 'Forms'],
+    description:
+      'A utility app for calculating tax values from user input with fast feedback and a simple, readable interface.',
+    problem:
+      'The focus was to turn manual tax calculations into a straightforward tool that reduces errors and gives users results immediately.',
+    highlights: [
+      'Form-driven calculator with clear user inputs and outputs',
+      'JavaScript logic for handling tax computation rules',
+      'Simple interface built for speed, clarity, and ease of use',
+    ],
+    image:
+      'linear-gradient(135deg, rgba(14, 54, 74, 0.95), rgba(8, 20, 29, 0.62)), url(https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80)',
+    github: githubProfile,
   },
 ]
 
@@ -131,15 +151,15 @@ const infoCards = [
 const skills = [
   { title: 'Frontend', items: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind'] },
   { title: 'Backend', items: ['Node.js', 'Express', 'JWT Authentication', 'REST APIs'] },
-  { title: 'Database', items: ['MongoDB', 'Mongoose', 'SQL Basics'] },
-  { title: 'Tools', items: ['Git', 'GitHub', 'Postman', 'Vercel', 'Netlify'] },
+  { title: 'Database', items: ['MongoDB', 'Mongoose', 'MySQL', 'SQL Basics'] },
+  { title: 'Tools', items: ['Git', 'GitHub', 'npm', 'VS Code', 'Postman'] },
 ]
 
 const contactItems = [
   { label: 'Email', value: contactEmail, href: `mailto:${contactEmail}` },
   { label: 'Phone', value: '0702220013', href: 'tel:0702220013' },
   { label: 'GitHub', value: 'github.com/Ojay1963', href: githubProfile },
-  { label: 'LinkedIn', value: 'linkedin.com/in/onoseloho', href: linkedInProfile },
+  { label: 'LinkedIn', value: 'linkedin.com/in/onos-eloho-7703a0aa', href: linkedInProfile },
 ]
 
 function Home({ scrollTo }) {
@@ -227,8 +247,9 @@ function Home({ scrollTo }) {
           </h1>
           <p className="hero-role">Full Stack Developer</p>
           <p className="hero-text">
-            I build scalable web applications with React, Node.js, authentication systems, and database
-            integration. Passionate about crafting efficient and user-friendly solutions.
+            Hi, I&apos;m Onos Eloho, a Full-Stack Developer specializing in React and Node.js. I build
+            modern web applications with strong frontend experiences, reliable backend systems, and clean
+            database integration.
           </p>
           <div className="tag-row">
             {heroTags.map((tag) => (
@@ -338,9 +359,9 @@ function Home({ scrollTo }) {
           <div className="about-grid">
             <div className="fade-in">
               <p className="muted">
-                I&apos;m a passionate full stack developer with 1 year of experience building modern web
-                applications. I specialize in React for frontend development and Node.js with Express for
-                backend services.
+                I&apos;m a full-stack JavaScript developer focused on building modern web applications using
+                React, Node.js, MongoDB, and MySQL. I enjoy creating products that are both useful and easy
+                to use.
               </p>
               <p className="muted">
                 My expertise includes creating robust REST APIs, implementing secure authentication systems
