@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Button from './Button.jsx'
+import ojLogo from './images/OJ-LOGO.png'
 
 const navItems = [
   { label: 'Home', href: '#top' },
@@ -35,7 +36,9 @@ function Navbar() {
     <header className="nav">
       <div className="container nav-inner">
         <Link className="brand" to="/">
-          <div className="brand-badge">OJ</div>
+          <div className="brand-badge">
+            <img src={ojLogo} alt="OJ logo" />
+          </div>
           <div className="brand-text">
             <h1>Onos Jephtha Eloho</h1>
             <span>Full Stack Developer</span>
