@@ -78,7 +78,7 @@ function Navbar() {
               )}
             </svg>
           </button>
-          <Button href="#contact" variant="primary">
+          <Button href="#contact" variant="primary" className="nav-contact-btn">
             Contact Me
           </Button>
           <button className="mobile-toggle" onClick={() => setOpen((v) => !v)} aria-label="Menu">
@@ -102,6 +102,9 @@ function Navbar() {
                 {item.label}
               </a>
             ))}
+            <Button href="#contact" variant="primary" onClick={() => setOpen(false)}>
+              Contact Me
+            </Button>
           </div>
         </div>
       )}

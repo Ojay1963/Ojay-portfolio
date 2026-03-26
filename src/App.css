@@ -1,6 +1,7 @@
 .app {
   min-height: 100vh;
   color: var(--text);
+  overflow-x: clip;
 }
 
 html {
@@ -8,7 +9,7 @@ html {
 }
 
 .container {
-  width: min(1200px, 92vw);
+  width: min(1200px, calc(100vw - 24px));
   margin: 0 auto;
 }
 
@@ -59,6 +60,7 @@ body.light .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
   padding: 18px 0;
 }
 
@@ -66,6 +68,8 @@ body.light .nav {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
+  flex: 1;
 }
 
 .brand-badge {
@@ -84,6 +88,7 @@ body.light .nav {
   font-size: 1rem;
   margin: 0;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .brand-text span {
@@ -132,6 +137,7 @@ body.light .nav-links a:hover {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .icon-btn {
@@ -339,6 +345,7 @@ body.light .ghost-btn {
 
 .project-card {
   padding: 18px;
+  min-width: 0;
 }
 
 .project-thumb {
@@ -404,6 +411,7 @@ body.light .ghost-btn {
   color: var(--muted);
   line-height: 1.6;
   margin-bottom: 10px;
+  overflow-wrap: anywhere;
 }
 
 .project-problem {
@@ -411,6 +419,7 @@ body.light .ghost-btn {
   color: var(--text);
   font-size: 0.82rem;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .project-outcome {
@@ -418,6 +427,7 @@ body.light .ghost-btn {
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .project-note {
@@ -539,42 +549,99 @@ body.light .ghost-btn {
 
 .form {
   display: grid;
-  gap: 14px;
+  gap: 18px;
+  padding: 24px;
+  align-content: start;
+}
+
+.form-header h3 {
+  margin: 6px 0 8px;
+  font-size: 1.2rem;
+}
+
+.form-header p {
+  margin: 0;
+}
+
+.form-eyebrow {
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7fb2ff;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
 }
 
 .form label {
   display: block;
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-bottom: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #c7d7f7;
 }
 
 .form input,
 .form textarea {
   width: 100%;
-  padding: 12px 14px;
-  border-radius: 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
   border: 1px solid rgba(42, 58, 92, 0.7);
   background: rgba(15, 22, 38, 0.9);
   color: var(--text);
   font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
   resize: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #7183a8;
 }
 
 .form input:focus,
 .form textarea:focus {
-  outline: 2px solid rgba(43, 107, 255, 0.4);
+  outline: none;
+  border-color: rgba(72, 120, 255, 0.95);
+  box-shadow: 0 0 0 4px rgba(43, 107, 255, 0.14);
+}
+
+body.light .form label {
+  color: #22314f;
+}
+
+body.light .form input,
+body.light .form textarea {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(214, 222, 238, 0.95);
+  color: #0b1324;
+}
+
+body.light .form input::placeholder,
+body.light .form textarea::placeholder {
+  color: #7a89a6;
+}
+
+.form-submit {
+  width: 100%;
 }
 
 .error {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: #ff9fa1;
-  margin-top: 4px;
+  margin-top: -2px;
 }
 
 .success {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #7fd0a6;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(18, 64, 44, 0.22);
+  border: 1px solid rgba(84, 186, 132, 0.28);
 }
 
 .footer {
@@ -621,6 +688,12 @@ body.light .ghost-btn {
   border-radius: 16px;
   background: rgba(18, 28, 49, 0.95);
   border: 1px solid rgba(42, 58, 92, 0.7);
+}
+
+.mobile-menu a,
+.mobile-menu .primary-btn,
+.mobile-menu .ghost-btn {
+  width: 100%;
 }
 
 .fade-in {
@@ -694,6 +767,7 @@ body.light .ghost-btn {
     grid-template-columns: 1fr;
   }
 
+  .info-grid,
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -701,15 +775,106 @@ body.light .ghost-btn {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+
+  .hero {
+    gap: 28px;
+    padding-top: 40px;
+  }
+
+  .hero-card {
+    width: min(360px, 100%);
+  }
 }
 
 @media (max-width: 560px) {
+  .container {
+    width: min(100%, calc(100vw - 20px));
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .nav-inner {
+    align-items: flex-start;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 0.78rem;
+  }
+
+  .brand-text h1 {
+    font-size: 0.92rem;
+  }
+
+  .brand-text span {
+    font-size: 0.72rem;
+  }
+
+  .nav-contact-btn {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .icon-btn,
+  .mobile-toggle {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .hero {
+    text-align: left;
+    padding: 32px 0 20px;
+  }
+
+  .hero-text {
+    max-width: none;
+  }
+
   .hero-actions {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .primary-btn,
+  .hero-actions .ghost-btn,
+  .project-actions .primary-btn,
+  .project-actions .ghost-btn {
+    width: 100%;
   }
 
   .footer-inner {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-card,
+  .featured-project,
+  .featured-project-panel,
+  .form {
+    padding: 16px;
+  }
+
+  .project-thumb {
+    height: 170px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .contact-card {
     align-items: flex-start;
   }
 }

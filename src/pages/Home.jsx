@@ -11,7 +11,7 @@ const contactEmail = 'ojaydev2010@gmail.com'
 const githubProfile = 'https://github.com/Ojay1963'
 const linkedInProfile = 'https://www.linkedin.com/in/onos-eloho-7703a0aa'
 
-const heroTags = ['React', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Tailwind', 'CI']
+const heroTags = ['React', 'Next.js', 'Node.js', 'MongoDB', 'Payments', 'SEO', 'Product UX']
 
 const featuredProject = {
   eyebrow: 'Featured Build',
@@ -26,6 +26,8 @@ const featuredProject = {
     'Modeled bookings, meals, and order activity in MongoDB so dine-in and delivery features share one backend system.',
   ],
   stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Payments', 'Tailwind'],
+  demo: 'https://delxta.vercel.app',
+  github: 'https://github.com/Ojay1963/Delxta.git',
 }
 
 const projects = [
@@ -45,10 +47,10 @@ const projects = [
       'Ordering and payment flow for delivery and advance meal requests',
       'Backend structure for bookings, food orders, payments, and customer activity',
     ],
-    imageSrc: 'https://image.thum.io/get/png/noanimate/width/1200/https://delxta.vercel.app',
+    imageSrc: '/project-previews/delxta.png',
     imageAlt: 'Screenshot preview of the Delxta restaurant website',
     demo: 'https://delxta.vercel.app',
-    github: githubProfile,
+    github: 'https://github.com/Ojay1963/Delxta.git',
   },
   {
     title: 'Pro-Find',
@@ -66,57 +68,101 @@ const projects = [
       'Property discovery experience designed for house hunters',
       'Backend structure for paid listings, account flows, and property data management',
     ],
-    imageSrc: 'https://image.thum.io/get/png/noanimate/width/1200/https://pro-find-nxw1.vercel.app',
+    imageSrc: '/project-previews/pro-find.png',
     imageAlt: 'Screenshot preview of the ProFind real estate marketplace',
     demo: 'https://pro-find-nxw1.vercel.app',
-    github: githubProfile,
+    github: 'https://github.com/Ojay1963/Pro-find.git',
   },
   {
-    title: 'Cars',
-    tags: ['React', 'JavaScript', 'CSS', 'UI', 'Catalog'],
-    role: 'Frontend Interface Project',
-    timeline: 'Responsive UI exercise',
+    title: 'Toolbox Hub',
+    tags: ['Next.js', 'React', 'Tailwind CSS', 'SEO', 'Utilities'],
+    role: 'Frontend Product Build',
+    timeline: 'Multi-page tools platform',
     description:
-      'A car-focused browsing experience for exploring vehicles, comparing options, and presenting listings in a clean interface.',
+      'A free online tools platform that helps users handle image, PDF, text, generator, calculator, converter, and developer workflows from one searchable directory.',
     problem:
-      'The goal was to make vehicle discovery easier with a layout that helps users scan available cars quickly and understand each listing clearly.',
+      'The challenge was organizing a large collection of utility pages in a way that still feels simple to browse, fast to search, and clear for users landing on individual tool pages from search engines.',
     outcome:
-      'Works best as a presentation project that highlights interface structure, listing clarity, and responsive browsing patterns.',
+      'Shows product structure beyond a single app screen by combining category browsing, internal search, SEO-friendly landing pages, and a wide tool catalog in one cohesive experience.',
     highlights: [
-      'Responsive listing layout for browsing multiple vehicles',
-      'Clear presentation of vehicle details and pricing information',
-      'Frontend structure focused on discoverability and visual clarity',
+      'Search-driven directory for quickly finding the right tool by task or keyword',
+      'Category-based browsing across images, PDFs, text, generators, calculators, converters, and developer tools',
+      'SEO-focused tool architecture with individually discoverable utility pages',
     ],
-    image:
-      'linear-gradient(135deg, rgba(32, 36, 52, 0.94), rgba(12, 16, 28, 0.56)), url(https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80)',
-    github: githubProfile,
+    imageSrc: '/project-previews/toolbox-hub.png',
+    imageAlt: 'Screenshot preview of the Toolbox Hub online tools platform',
+    demo: 'https://toolbox-hub-amber.vercel.app/',
+    github: 'https://github.com/Ojay1963/toolbox-hub.git',
   },
   {
-    title: 'Tax Calculator',
-    tags: ['JavaScript', 'HTML', 'CSS', 'Logic', 'Forms'],
-    role: 'Utility App',
-    timeline: 'Fast single-purpose tool',
+    title: 'OJ Devices',
+    tags: ['React', 'E-commerce', 'Payments', 'Authentication', 'Admin Dashboard'],
+    role: 'Full Stack Commerce Build',
+    timeline: 'Catalog and checkout workflow',
     description:
-      'A utility app for calculating tax values from user input with fast feedback and a simple, readable interface.',
+      'An online store for premium laptops and accessories with product discovery, cart and checkout flows, account management, and delivery-focused ordering.',
     problem:
-      'The focus was to turn manual tax calculations into a straightforward tool that reduces errors and gives users results immediately.',
+      'The product needed to make laptop and accessory shopping feel organized from browsing to payment, while also supporting customer accounts, wishlists, order tracking, and store-side management in one system.',
     outcome:
-      'Adds range to the portfolio by showing practical form handling, validation, and calculation logic beyond larger app builds.',
+      'Highlights practical commerce architecture by combining searchable product catalogs, checkout and payment callbacks, OTP-based account flows, and admin tools for products, orders, and store settings.',
     highlights: [
-      'Form-driven calculator with clear user inputs and outputs',
-      'JavaScript logic for handling tax computation rules',
-      'Simple interface built for speed, clarity, and ease of use',
+      'Product catalog with search, filters, wishlist, comparison, and category browsing for laptops and accessories',
+      'Cart, checkout, payment verification, and account order-tracking flows for customers',
+      'Admin dashboard for managing products, orders, users, uploads, and store settings',
     ],
-    image:
-      'linear-gradient(135deg, rgba(14, 54, 74, 0.95), rgba(8, 20, 29, 0.62)), url(https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80)',
-    github: githubProfile,
+    imageSrc: '/project-previews/oj-devices.png',
+    imageAlt: 'Screenshot preview of the OJ Devices laptop and accessories store',
+    demo: 'https://laptop-acessory-client.vercel.app/',
+    github: 'https://github.com/Ojay1963/LaptopAcessory.git',
+  },
+  {
+    title: 'Ojay Motors',
+    tags: ['React', 'Automotive', 'Inventory', 'Finance UI', 'Booking'],
+    role: 'Frontend Product Build',
+    timeline: 'Vehicle discovery platform',
+    description:
+      'A luxury vehicle platform for browsing premium cars in Nigeria, exploring detailed listings, and moving from discovery into finance and test-drive interest.',
+    problem:
+      'The product needed to present premium inventory in a way that feels polished and informative, while also helping users compare vehicles, estimate financing, and request appointments without losing context.',
+    outcome:
+      'Shows stronger interface depth than a basic catalog by combining inventory filtering, detailed vehicle pages, finance estimation, saved and compare flows, and appointment booking in one experience.',
+    highlights: [
+      'Inventory browsing with search, make and body-type filters, and price-range controls',
+      'Vehicle detail pages with specs, gallery views, finance estimator, and compare or save actions',
+      'Test-drive booking flow and dealership-style content for showroom, services, and contact journeys',
+    ],
+    imageSrc: '/project-previews/ojay-motors.png',
+    imageAlt: 'Screenshot preview of the Ojay Motors luxury vehicle website',
+    demo: 'https://cars-azure-gamma.vercel.app/',
+    github: 'https://github.com/Ojay1963/Cars.git',
+  },
+  {
+    title: 'Naija Tax Calculator',
+    tags: ['React', 'Tax Tech', 'PAYE', 'Paystack', 'Authentication'],
+    role: 'Product Utility Build',
+    timeline: 'Calculator and paid-service workflow',
+    description:
+      'A Nigerian tax platform that helps users estimate PAYE and company tax, then move into paid reports or consultations when they need reviewed output or human guidance.',
+    problem:
+      'The challenge was making tax estimation easier for users while still supporting more serious follow-up needs like printable reports, consultations, account management, and payment-backed service requests.',
+    outcome:
+      'Shows stronger product depth than a basic calculator by combining estimation flows, educational guidance, account features, and monetized tax services in one platform.',
+    highlights: [
+      'Calculator flows for Nigerian PAYE and company-tax estimates with practical result breakdowns',
+      'Paid report and consultation workflows connected to Paystack for premium tax services',
+      'Account system with registration, email verification, password reset, and dashboard access',
+    ],
+    imageSrc: '/project-previews/naija-tax-calculator.png',
+    imageAlt: 'Screenshot preview of the Naija Tax Calculator application',
+    demo: 'https://nigeria-tax-calculator-client.vercel.app/calculator',
+    github: 'https://github.com/Ojay1963/Nigeria-Tax-calculator.git',
   },
 ]
 
 const infoCards = [
   {
-    title: 'Full Stack Development',
-    description: 'Building scalable web apps with modern frameworks and robust APIs.',
+    title: 'Product Builds',
+    description: 'Shipping marketplaces, booking systems, e-commerce flows, and utility platforms people can actually use.',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
         <path
@@ -130,8 +176,8 @@ const infoCards = [
     ),
   },
   {
-    title: 'Database Integration',
-    description: 'Secure data modeling with MongoDB, SQL, and cloud-ready pipelines.',
+    title: 'Commerce & Payments',
+    description: 'Designing product catalogs, checkout experiences, payment flows, and customer account journeys.',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
         <ellipse cx="12" cy="6" rx="7" ry="3" stroke="currentColor" strokeWidth="1.4" />
@@ -141,8 +187,8 @@ const infoCards = [
     ),
   },
   {
-    title: 'REST API Design',
-    description: 'Designing maintainable APIs with authentication and documentation.',
+    title: 'Search & Discovery',
+    description: 'Improving how users browse listings, discover tools, filter content, and move through product workflows.',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
         <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
@@ -153,8 +199,8 @@ const infoCards = [
     ),
   },
   {
-    title: 'Authentication Systems',
-    description: 'JWT, OAuth, and role-based access control for modern apps.',
+    title: 'Auth & Admin Systems',
+    description: 'Building secure account flows, OTP verification, dashboards, and admin controls for modern apps.',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
         <rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" strokeWidth="1.4" />
@@ -165,10 +211,10 @@ const infoCards = [
 ]
 
 const skills = [
-  { title: 'Frontend', items: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind'] },
-  { title: 'Backend', items: ['Node.js', 'Express', 'JWT Authentication', 'REST APIs'] },
-  { title: 'Database', items: ['MongoDB', 'Mongoose', 'MySQL', 'SQL Basics'] },
-  { title: 'Tools', items: ['Git', 'GitHub', 'npm', 'VS Code', 'Postman'] },
+  { title: 'Frontend', items: ['React', 'Next.js', 'JavaScript', 'HTML', 'CSS', 'Tailwind'] },
+  { title: 'Backend', items: ['Node.js', 'Express', 'REST APIs', 'JWT Authentication', 'OTP Flows'] },
+  { title: 'Database & Infra', items: ['MongoDB', 'Mongoose', 'MySQL', 'Vercel', 'Netlify'] },
+  { title: 'Product Systems', items: ['Payments', 'SEO', 'Marketplaces', 'Booking Flows', 'Admin Dashboards'] },
 ]
 
 const contactItems = [
@@ -253,8 +299,9 @@ function Home() {
           </h1>
           <p className="hero-role">I build full stack products that people can actually use.</p>
           <p className="hero-text">
-            I&apos;m Onos Eloho, a full stack JavaScript developer focused on React and Node.js. I design
-            and ship booking flows, marketplace experiences, dashboards, and APIs with clean frontend UX
+            I&apos;m Onos Eloho, a full stack JavaScript developer focused on building product-driven web
+            apps with React, Next.js, Node.js, and MongoDB. I design and ship marketplaces, booking flows,
+            e-commerce systems, admin dashboards, and SEO-friendly utility platforms with clean frontend UX
             and reliable backend structure.
           </p>
           <div className="tag-row">
@@ -342,11 +389,11 @@ function Home() {
                 ))}
               </ul>
               <div className="project-actions">
-                <Button href={githubProfile} variant="primary">
-                  View GitHub Profile
+                <Button href={featuredProject.demo} variant="primary">
+                  Live Demo
                 </Button>
-                <Button href="#contact" variant="ghost">
-                  Request a Walkthrough
+                <Button href={featuredProject.github} variant="ghost">
+                  View Code
                 </Button>
               </div>
             </div>
@@ -365,19 +412,21 @@ function Home() {
           <div className="about-grid">
             <div className="fade-in">
               <p className="muted">
-                I&apos;m a full-stack JavaScript developer focused on building modern web applications using
-                React, Node.js, MongoDB, and MySQL. I enjoy creating products that are both useful and easy
-                to use.
+                I&apos;m a full-stack JavaScript developer focused on building modern web products from idea
+                to deployment. My work covers restaurant booking platforms, real estate marketplaces,
+                e-commerce storefronts, automotive inventory experiences, tax tools, and SEO-driven utility
+                products.
               </p>
               <p className="muted">
-                My expertise includes creating robust REST APIs, implementing secure authentication systems
-                with JWT, and seamless database integration with MongoDB. I focus on delivering scalable,
-                maintainable solutions that solve real-world problems.
+                I enjoy solving product problems that sit between frontend experience and backend logic:
+                helping users browse inventory, make payments, manage accounts, request services, or find
+                the right tool quickly. I care about clarity, structure, and making complex workflows feel
+                simple.
               </p>
               <p className="muted">
-                I have experience building and deploying full stack applications from concept to production.
-                I&apos;m always eager to learn new technologies and best practices. Currently open to remote
-                full stack developer positions.
+                My stack is strongest around React, Next.js, Node.js, Express, MongoDB, authentication, and
+                payment-backed product flows. I&apos;m currently open to remote full stack roles where I can
+                keep building useful, scalable customer-facing products.
               </p>
             </div>
             <div className="info-grid">
@@ -409,10 +458,10 @@ function Home() {
               <small>Personal Projects</small>
               <div className="muted">1 year</div>
               <ul className="experience-list">
-                <li>Built full stack applications with authentication using JWT and bcrypt.</li>
-                <li>Designed and implemented REST APIs connected to React frontend.</li>
-                <li>Managed database operations including CRUD functionality with MongoDB.</li>
-                <li>Deployed frontend applications on Vercel and Netlify, backend on various platforms.</li>
+                <li>Built and deployed product-focused apps including booking systems, marketplaces, online stores, and service platforms.</li>
+                <li>Implemented authentication, OTP verification, dashboards, and payment-backed user journeys across multiple projects.</li>
+                <li>Designed APIs and data structures for reservations, listings, tax calculations, orders, and customer accounts.</li>
+                <li>Shipped frontend applications on Vercel and Netlify with real project demos and production-style portfolio presentation.</li>
               </ul>
             </div>
           </div>
@@ -425,8 +474,9 @@ function Home() {
           <div className="contact-grid">
             <div className="fade-in">
               <p className="muted">
-                I&apos;m currently open to remote full stack developer opportunities. Feel free to reach out
-                if you&apos;d like to discuss a project or just connect.
+                I&apos;m currently open to remote full stack developer opportunities and product-focused
+                freelance work. Feel free to reach out if you&apos;d like to discuss a marketplace,
+                dashboard, booking platform, e-commerce build, or utility product.
               </p>
               <div className="contact-list">
                 {contactItems.map((item) => (
@@ -451,28 +501,49 @@ function Home() {
               </div>
             </div>
             <form className="form glass fade-in" onSubmit={handleSubmit} noValidate>
-              <div>
-                <label htmlFor="name">Name</label>
-                <input id="name" name="name" value={formValues.name} onChange={handleChange} />
+              <div className="form-header">
+                <p className="form-eyebrow">Send a Message</p>
+                <h3>Let&apos;s talk about your project</h3>
+                <p className="muted">
+                  Share a few details and I&apos;ll get back to you as soon as I can.
+                </p>
+              </div>
+              <div className="form-field">
+                <label htmlFor="name">Full Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  placeholder="Your full name"
+                  value={formValues.name}
+                  onChange={handleChange}
+                />
                 {errors.name && <div className="error">{errors.name}</div>}
               </div>
-              <div>
-                <label htmlFor="email">Email</label>
-                <input id="email" type="email" name="email" value={formValues.email} onChange={handleChange} />
+              <div className="form-field">
+                <label htmlFor="email">Email Address</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  value={formValues.email}
+                  onChange={handleChange}
+                />
                 {errors.email && <div className="error">{errors.email}</div>}
               </div>
-              <div>
-                <label htmlFor="message">Message</label>
+              <div className="form-field">
+                <label htmlFor="message">Project Details</label>
                 <textarea
                   id="message"
                   name="message"
-                  rows="4"
+                  rows="5"
+                  placeholder="Tell me about the product, feature, or role you have in mind."
                   value={formValues.message}
                   onChange={handleChange}
                 />
                 {errors.message && <div className="error">{errors.message}</div>}
               </div>
-              <Button type="submit" variant="primary">
+              <Button type="submit" variant="primary" className="form-submit">
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
               {statusMessage && <div className="success">{statusMessage}</div>}
