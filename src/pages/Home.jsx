@@ -11,37 +11,58 @@ const contactEmail = 'ojaydev2010@gmail.com'
 const githubProfile = 'https://github.com/Ojay1963'
 const linkedInProfile = 'https://www.linkedin.com/in/onos-eloho-7703a0aa'
 
-const heroTags = ['React', 'Next.js', 'Node.js', 'MongoDB', 'Payments', 'SEO', 'Product UX']
+const heroTags = ['React', 'Next.js', 'Node.js', 'MongoDB', 'Payments', 'SEO', 'APIs']
 
 const featuredProject = {
   eyebrow: 'Featured Build',
-  title: 'Delxta',
+  title: 'ToolsHub',
   summary:
-    'A full stack restaurant platform that combines table reservations, food ordering, online payments, and scheduled dine-in requests in one customer flow.',
+    'A searchable tools platform that brings image, PDF, text, generator, calculator, converter, and developer utilities into one polished product.',
   problem:
-    'The main challenge was combining restaurant booking and order management without making the experience feel fragmented. Customers needed to reserve a table, place delivery orders, pay online, or schedule meals before arriving, all from one product.',
+    'The challenge was organizing a broad utility catalog without making discovery feel overwhelming. Users needed a fast way to search, browse categories, and land directly on useful tool pages with clear intent.',
   approach: [
-    'Built a React frontend that supports reservations, menu browsing, ordering, and checkout in a single user journey.',
-    'Structured an Express API to manage bookings, orders, customer actions, and payment-related flows cleanly.',
-    'Modeled bookings, meals, and order activity in MongoDB so dine-in and delivery features share one backend system.',
+    'Built a Next.js frontend that groups utilities into clear categories while keeping navigation simple and quick to scan.',
+    'Designed search-first discovery so users can find the right tool by task, keyword, or category with less friction.',
+    'Structured the platform for SEO-friendly tool pages, helping individual utilities stand on their own and attract targeted traffic.',
   ],
-  stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Payments', 'Tailwind'],
-  demo: 'https://delxta.vercel.app',
-  github: 'https://github.com/Ojay1963/Delxta.git',
+  stack: ['Next.js', 'React', 'Tailwind CSS', 'SEO', 'Utilities'],
+  demo: 'https://toolbox-hub-amber.vercel.app/',
+  github: 'https://github.com/Ojay1963/toolbox-hub.git',
 }
 
 const projects = [
   {
+    title: 'ToolsHub',
+    tags: ['Next.js', 'React', 'Tailwind CSS', 'SEO', 'Utilities'],
+    role: 'Frontend Developer',
+    timeline: 'Multi-page utilities platform',
+    description:
+      'A free online tools platform that helps users handle image, PDF, text, generator, calculator, converter, and developer workflows from one searchable directory.',
+    problem:
+      'The challenge was organizing a large collection of utility pages in a way that still feels simple to browse, fast to search, and clear for users landing on individual tool pages from search engines.',
+    outcome:
+      'Demonstrates scalable frontend structure with category browsing, internal search, SEO-ready pages, and a broad utility catalog.',
+    highlights: [
+      'Search-driven directory for quickly finding the right tool by task or keyword',
+      'Category-based browsing across images, PDFs, text, generators, calculators, converters, and developer tools',
+      'SEO-focused tool architecture with individually discoverable utility pages',
+    ],
+    imageSrc: '/project-previews/toolbox-hub.png',
+    imageAlt: 'Screenshot preview of the ToolsHub online tools platform',
+    demo: 'https://toolbox-hub-amber.vercel.app/',
+    github: 'https://github.com/Ojay1963/toolbox-hub.git',
+  },
+  {
     title: 'Delxta',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Payments'],
-    role: 'Lead Full Stack Build',
-    timeline: 'End-to-end product build',
+    role: 'Full Stack Developer',
+    timeline: 'End-to-end product development',
     description:
       'A restaurant platform where customers can reserve tables, place delivery orders, pay online, and schedule meals in advance for dine-in.',
     problem:
       'The product needed to combine restaurant seating, online ordering, and payment in one flow, so customers can book ahead, pay, order for delivery, or prepare meals before arriving.',
     outcome:
-      'Shows a stronger product-thinking case study than a standard CRUD app because reservations, ordering, and payments work inside one customer journey.',
+      'Demonstrates end-to-end product execution by connecting reservations, ordering, and payments in one workflow.',
     highlights: [
       'Table reservation flow for customers planning to dine in',
       'Ordering and payment flow for delivery and advance meal requests',
@@ -55,14 +76,14 @@ const projects = [
   {
     title: 'Pro-Find',
     tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Payments'],
-    role: 'Marketplace Product Build',
-    timeline: 'Multi-role listing workflow',
+    role: 'Full Stack Developer',
+    timeline: 'Marketplace listing workflow',
     description:
       'An open real estate marketplace where agents and property owners can pay to list properties for house hunters to discover.',
     problem:
       'The product needed to support two-sided marketplace activity: paid property listings from agents or owners, and a clean search experience for people looking for homes.',
     outcome:
-      'Demonstrates marketplace architecture, paid listing flows, and a cleaner search experience for users browsing property inventory.',
+      'Demonstrates marketplace architecture through paid listings, search-focused browsing, and role-based listing flows.',
     highlights: [
       'Listing flow for agents and property owners to publish properties',
       'Property discovery experience designed for house hunters',
@@ -74,58 +95,37 @@ const projects = [
     github: 'https://github.com/Ojay1963/Pro-find.git',
   },
   {
-    title: 'Toolbox Hub',
-    tags: ['Next.js', 'React', 'Tailwind CSS', 'SEO', 'Utilities'],
-    role: 'Frontend Product Build',
-    timeline: 'Multi-page tools platform',
+    title: 'Naija Tax Calculator',
+    tags: ['React', 'Tax Tech', 'PAYE', 'Paystack', 'Authentication'],
+    role: 'Full Stack Developer',
+    timeline: 'Calculator and paid-service workflow',
     description:
-      'A free online tools platform that helps users handle image, PDF, text, generator, calculator, converter, and developer workflows from one searchable directory.',
+      'A Nigerian tax platform that helps users estimate PAYE and company tax, then move into paid reports or consultations when they need reviewed output or human guidance.',
     problem:
-      'The challenge was organizing a large collection of utility pages in a way that still feels simple to browse, fast to search, and clear for users landing on individual tool pages from search engines.',
+      'The challenge was making tax estimation easier for users while still supporting more serious follow-up needs like printable reports, consultations, account management, and payment-backed service requests.',
     outcome:
-      'Shows product structure beyond a single app screen by combining category browsing, internal search, SEO-friendly landing pages, and a wide tool catalog in one cohesive experience.',
+      'Demonstrates product depth by combining tax estimation, educational guidance, account features, and paid service workflows.',
     highlights: [
-      'Search-driven directory for quickly finding the right tool by task or keyword',
-      'Category-based browsing across images, PDFs, text, generators, calculators, converters, and developer tools',
-      'SEO-focused tool architecture with individually discoverable utility pages',
+      'Calculator flows for Nigerian PAYE and company-tax estimates with practical result breakdowns',
+      'Paid report and consultation workflows connected to Paystack for premium tax services',
+      'Account system with registration, email verification, password reset, and dashboard access',
     ],
-    imageSrc: '/project-previews/toolbox-hub.png',
-    imageAlt: 'Screenshot preview of the Toolbox Hub online tools platform',
-    demo: 'https://toolbox-hub-amber.vercel.app/',
-    github: 'https://github.com/Ojay1963/toolbox-hub.git',
-  },
-  {
-    title: 'OJ Devices',
-    tags: ['React', 'E-commerce', 'Payments', 'Authentication', 'Admin Dashboard'],
-    role: 'Full Stack Commerce Build',
-    timeline: 'Catalog and checkout workflow',
-    description:
-      'An online store for premium laptops and accessories with product discovery, cart and checkout flows, account management, and delivery-focused ordering.',
-    problem:
-      'The product needed to make laptop and accessory shopping feel organized from browsing to payment, while also supporting customer accounts, wishlists, order tracking, and store-side management in one system.',
-    outcome:
-      'Highlights practical commerce architecture by combining searchable product catalogs, checkout and payment callbacks, OTP-based account flows, and admin tools for products, orders, and store settings.',
-    highlights: [
-      'Product catalog with search, filters, wishlist, comparison, and category browsing for laptops and accessories',
-      'Cart, checkout, payment verification, and account order-tracking flows for customers',
-      'Admin dashboard for managing products, orders, users, uploads, and store settings',
-    ],
-    imageSrc: '/project-previews/oj-devices.png',
-    imageAlt: 'Screenshot preview of the OJ Devices laptop and accessories store',
-    demo: 'https://laptop-acessory-client.vercel.app/',
-    github: 'https://github.com/Ojay1963/LaptopAcessory.git',
+    imageSrc: '/project-previews/naija-tax-calculator.png',
+    imageAlt: 'Screenshot preview of the Naija Tax Calculator application',
+    demo: 'https://nigeria-tax-calculator-client.vercel.app/calculator',
+    github: 'https://github.com/Ojay1963/Nigeria-Tax-calculator.git',
   },
   {
     title: 'Ojay Motors',
     tags: ['React', 'Automotive', 'Inventory', 'Finance UI', 'Booking'],
-    role: 'Frontend Product Build',
+    role: 'Frontend Developer',
     timeline: 'Vehicle discovery platform',
     description:
       'A luxury vehicle platform for browsing premium cars in Nigeria, exploring detailed listings, and moving from discovery into finance and test-drive interest.',
     problem:
       'The product needed to present premium inventory in a way that feels polished and informative, while also helping users compare vehicles, estimate financing, and request appointments without losing context.',
     outcome:
-      'Shows stronger interface depth than a basic catalog by combining inventory filtering, detailed vehicle pages, finance estimation, saved and compare flows, and appointment booking in one experience.',
+      'Demonstrates a feature-rich vehicle discovery experience with filtering, detailed listings, finance estimation, compare flows, and appointment booking.',
     highlights: [
       'Inventory browsing with search, make and body-type filters, and price-range controls',
       'Vehicle detail pages with specs, gallery views, finance estimator, and compare or save actions',
@@ -137,32 +137,32 @@ const projects = [
     github: 'https://github.com/Ojay1963/Cars.git',
   },
   {
-    title: 'Naija Tax Calculator',
-    tags: ['React', 'Tax Tech', 'PAYE', 'Paystack', 'Authentication'],
-    role: 'Product Utility Build',
-    timeline: 'Calculator and paid-service workflow',
+    title: 'OJ Devices',
+    tags: ['React', 'E-commerce', 'Payments', 'Authentication', 'Admin Dashboard'],
+    role: 'Full Stack Developer',
+    timeline: 'Catalog and checkout workflow',
     description:
-      'A Nigerian tax platform that helps users estimate PAYE and company tax, then move into paid reports or consultations when they need reviewed output or human guidance.',
+      'An online store for premium laptops and accessories with product discovery, cart and checkout flows, account management, and delivery-focused ordering.',
     problem:
-      'The challenge was making tax estimation easier for users while still supporting more serious follow-up needs like printable reports, consultations, account management, and payment-backed service requests.',
+      'The product needed to make laptop and accessory shopping feel organized from browsing to payment, while also supporting customer accounts, wishlists, order tracking, and store-side management in one system.',
     outcome:
-      'Shows stronger product depth than a basic calculator by combining estimation flows, educational guidance, account features, and monetized tax services in one platform.',
+      'Demonstrates practical e-commerce architecture with searchable catalog flows, payment callbacks, OTP-based authentication, and admin tooling.',
     highlights: [
-      'Calculator flows for Nigerian PAYE and company-tax estimates with practical result breakdowns',
-      'Paid report and consultation workflows connected to Paystack for premium tax services',
-      'Account system with registration, email verification, password reset, and dashboard access',
+      'Product catalog with search, filters, wishlist, comparison, and category browsing for laptops and accessories',
+      'Cart, checkout, payment verification, and account order-tracking flows for customers',
+      'Admin dashboard for managing products, orders, users, uploads, and store settings',
     ],
-    imageSrc: '/project-previews/naija-tax-calculator.png',
-    imageAlt: 'Screenshot preview of the Naija Tax Calculator application',
-    demo: 'https://nigeria-tax-calculator-client.vercel.app/calculator',
-    github: 'https://github.com/Ojay1963/Nigeria-Tax-calculator.git',
+    imageSrc: '/project-previews/oj-devices.png',
+    imageAlt: 'Screenshot preview of the OJ Devices laptop and accessories store',
+    demo: 'https://laptop-acessory-client.vercel.app/',
+    github: 'https://github.com/Ojay1963/LaptopAcessory.git',
   },
 ]
 
 const infoCards = [
   {
     title: 'Product Builds',
-    description: 'Shipping marketplaces, booking systems, e-commerce flows, and utility platforms people can actually use.',
+    description: 'Building marketplaces, booking systems, e-commerce flows, and utility platforms with practical user value.',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
         <path
@@ -177,7 +177,7 @@ const infoCards = [
   },
   {
     title: 'Commerce & Payments',
-    description: 'Designing product catalogs, checkout experiences, payment flows, and customer account journeys.',
+    description: 'Designing product catalogs, checkout journeys, payment flows, and customer account experiences.',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
         <ellipse cx="12" cy="6" rx="7" ry="3" stroke="currentColor" strokeWidth="1.4" />
@@ -188,7 +188,7 @@ const infoCards = [
   },
   {
     title: 'Search & Discovery',
-    description: 'Improving how users browse listings, discover tools, filter content, and move through product workflows.',
+    description: 'Improving how users browse listings, discover tools, filter content, and complete key tasks.',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
         <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
@@ -200,7 +200,7 @@ const infoCards = [
   },
   {
     title: 'Auth & Admin Systems',
-    description: 'Building secure account flows, OTP verification, dashboards, and admin controls for modern apps.',
+    description: 'Building account flows, OTP verification, dashboards, and admin controls for production-ready apps.',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
         <rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" strokeWidth="1.4" />
@@ -219,7 +219,7 @@ const skills = [
 
 const contactItems = [
   { label: 'Email', value: contactEmail, href: `mailto:${contactEmail}` },
-  { label: 'Phone', value: '0702220013', href: 'tel:0702220013' },
+  { label: 'Phone', value: '07082206013', href: 'tel:07082206013' },
   { label: 'GitHub', value: 'github.com/Ojay1963', href: githubProfile },
   { label: 'LinkedIn', value: 'linkedin.com/in/onos-eloho-7703a0aa', href: linkedInProfile },
 ]
@@ -297,12 +297,12 @@ function Home() {
             Onos Jephtha <br />
             Eloho
           </h1>
-          <p className="hero-role">I build full stack products that people can actually use.</p>
+          <p className="hero-role">I build full stack web products with clear business value.</p>
           <p className="hero-text">
-            I&apos;m Onos Eloho, a full stack JavaScript developer focused on building product-driven web
-            apps with React, Next.js, Node.js, and MongoDB. I design and ship marketplaces, booking flows,
-            e-commerce systems, admin dashboards, and SEO-friendly utility platforms with clean frontend UX
-            and reliable backend structure.
+            I&apos;m Onos Eloho, a full stack JavaScript developer focused on building production-ready web
+            applications with React, Next.js, Node.js, and MongoDB. I design and ship marketplaces, booking
+            systems, e-commerce platforms, admin dashboards, and SEO-friendly utility products with strong
+            frontend usability and reliable backend architecture.
           </p>
           <div className="tag-row">
             {heroTags.map((tag) => (
@@ -412,21 +412,20 @@ function Home() {
           <div className="about-grid">
             <div className="fade-in">
               <p className="muted">
-                I&apos;m a full-stack JavaScript developer focused on building modern web products from idea
-                to deployment. My work covers restaurant booking platforms, real estate marketplaces,
+                I&apos;m a full stack JavaScript developer focused on building modern web products from idea
+                to deployment. My portfolio includes restaurant booking platforms, real estate marketplaces,
                 e-commerce storefronts, automotive inventory experiences, tax tools, and SEO-driven utility
                 products.
               </p>
               <p className="muted">
-                I enjoy solving product problems that sit between frontend experience and backend logic:
-                helping users browse inventory, make payments, manage accounts, request services, or find
-                the right tool quickly. I care about clarity, structure, and making complex workflows feel
-                simple.
+                I enjoy solving product problems across frontend experience and backend logic, helping users
+                browse inventory, make payments, manage accounts, request services, and find the right tool
+                quickly. I care about clarity, structure, and making complex workflows feel simple.
               </p>
               <p className="muted">
-                My stack is strongest around React, Next.js, Node.js, Express, MongoDB, authentication, and
+                My strongest stack includes React, Next.js, Node.js, Express, MongoDB, authentication, and
                 payment-backed product flows. I&apos;m currently open to remote full stack roles where I can
-                keep building useful, scalable customer-facing products.
+                continue building useful, scalable customer-facing products.
               </p>
             </div>
             <div className="info-grid">
@@ -455,13 +454,13 @@ function Home() {
           <div className="experience">
             <div className="experience-card glass fade-in">
               <h4>Full Stack Developer</h4>
-              <small>Personal Projects</small>
-              <div className="muted">1 year</div>
+              <small>Independent Projects</small>
+              <div className="muted">2025 - Present</div>
               <ul className="experience-list">
-                <li>Built and deployed product-focused apps including booking systems, marketplaces, online stores, and service platforms.</li>
+                <li>Built and deployed product-focused applications including booking systems, marketplaces, online stores, and service platforms.</li>
                 <li>Implemented authentication, OTP verification, dashboards, and payment-backed user journeys across multiple projects.</li>
-                <li>Designed APIs and data structures for reservations, listings, tax calculations, orders, and customer accounts.</li>
-                <li>Shipped frontend applications on Vercel and Netlify with real project demos and production-style portfolio presentation.</li>
+                <li>Designed APIs and data models for reservations, property listings, tax calculations, orders, and customer accounts.</li>
+                <li>Deployed frontend applications on Vercel and Netlify with working demos and production-style presentation.</li>
               </ul>
             </div>
           </div>
@@ -474,9 +473,9 @@ function Home() {
           <div className="contact-grid">
             <div className="fade-in">
               <p className="muted">
-                I&apos;m currently open to remote full stack developer opportunities and product-focused
-                freelance work. Feel free to reach out if you&apos;d like to discuss a marketplace,
-                dashboard, booking platform, e-commerce build, or utility product.
+                I&apos;m currently open to remote full stack opportunities and product-focused freelance
+                work. Feel free to reach out if you&apos;d like to discuss a marketplace, dashboard,
+                booking platform, e-commerce product, or utility platform.
               </p>
               <div className="contact-list">
                 {contactItems.map((item) => (

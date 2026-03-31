@@ -216,6 +216,10 @@ body.light .ghost-btn {
   transform: translateY(-2px);
 }
 
+body.light .ghost-btn:hover {
+  background: rgba(237, 242, 251, 0.98);
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -242,6 +246,10 @@ body.light .ghost-btn {
   color: #c5d7ff;
 }
 
+body.light .hero-role {
+  color: #405272;
+}
+
 .hero-text {
   color: var(--muted);
   line-height: 1.7;
@@ -262,6 +270,12 @@ body.light .ghost-btn {
   border-radius: 999px;
   font-size: 0.75rem;
   border: 1px solid rgba(44, 66, 110, 0.7);
+}
+
+body.light .tag {
+  background: rgba(236, 242, 252, 0.92);
+  color: #274069;
+  border-color: rgba(197, 210, 232, 0.95);
 }
 
 .hero-actions {
@@ -286,6 +300,12 @@ body.light .ghost-btn {
   border: 1px solid rgba(64, 92, 146, 0.6);
   box-shadow: 0 30px 60px rgba(8, 14, 28, 0.5);
   animation: float 6s ease-in-out infinite;
+}
+
+body.light .hero-card {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(232, 239, 251, 0.96));
+  border-color: rgba(197, 210, 232, 0.95);
+  box-shadow: 0 28px 50px rgba(22, 36, 64, 0.14);
 }
 
 .hero-card img {
@@ -335,6 +355,11 @@ body.light .ghost-btn {
   border: 1px solid rgba(42, 58, 92, 0.55);
 }
 
+body.light .featured-project-panel {
+  background: rgba(244, 248, 255, 0.96);
+  border-color: rgba(214, 222, 238, 0.95);
+}
+
 .featured-project-panel h4 {
   margin: 0 0 12px;
 }
@@ -366,6 +391,10 @@ body.light .ghost-btn {
   width: 100%;
   object-fit: cover;
   background: #0f1728;
+}
+
+body.light .project-thumb-image {
+  background: #eef3fb;
 }
 
 .project-thumb-fallback {
@@ -547,6 +576,10 @@ body.light .ghost-btn {
   border-color: rgba(62, 90, 140, 0.9);
 }
 
+body.light .contact-card:hover {
+  border-color: rgba(116, 146, 206, 0.95);
+}
+
 .contact-list {
   display: grid;
   gap: 14px;
@@ -656,6 +689,10 @@ body.light .form textarea::placeholder {
   border-top: 1px solid rgba(32, 45, 71, 0.6);
 }
 
+body.light .footer {
+  border-top-color: rgba(214, 222, 238, 0.95);
+}
+
 .footer-inner {
   display: flex;
   justify-content: space-between;
@@ -699,6 +736,20 @@ body.light .form textarea::placeholder {
 .mobile-menu .primary-btn,
 .mobile-menu .ghost-btn {
   width: 100%;
+}
+
+.mobile-menu a {
+  color: #e9f0ff;
+}
+
+body.light .mobile-menu {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(214, 222, 238, 0.95);
+  box-shadow: 0 20px 36px rgba(14, 22, 40, 0.12);
+}
+
+body.light .mobile-menu a {
+  color: #0b1324;
 }
 
 .fade-in {
