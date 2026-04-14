@@ -1,12 +1,14 @@
 function SkillCard({ title, items }) {
   return (
-    <div className="skill-card glass fade-in">
+    <div className="skill-card surface fade-in">
       <h4>{title}</h4>
-      <ul>
+      <div className="skill-items">
         {items.map((item) => (
-          <li key={item}>{item}</li>
+          <span key={item} className="skill-pill">
+            {item}
+          </span>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }

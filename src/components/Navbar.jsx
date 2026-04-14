@@ -5,9 +5,10 @@ import ojLogo from './images/OJ-LOGO.png'
 
 const navItems = [
   { label: 'Home', href: '#top' },
+  { label: 'Services', href: '#services' },
   { label: 'Projects', href: '#projects' },
-  { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
+  { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -41,7 +42,7 @@ function Navbar() {
           </div>
           <div className="brand-text">
             <h1>Onos Jephtha Eloho</h1>
-            <span>Full Stack Developer</span>
+            <span>Full Stack Developer for product-led teams</span>
           </div>
         </Link>
 
@@ -82,7 +83,7 @@ function Navbar() {
             </svg>
           </button>
           <Button href="#contact" variant="primary" className="nav-contact-btn">
-            Contact Me
+            Hire Me
           </Button>
           <button className="mobile-toggle" onClick={() => setOpen((v) => !v)} aria-label="Menu">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -106,7 +107,7 @@ function Navbar() {
               </a>
             ))}
             <Button href="#contact" variant="primary" onClick={() => setOpen(false)}>
-              Contact Me
+              Hire Me
             </Button>
           </div>
         </div>

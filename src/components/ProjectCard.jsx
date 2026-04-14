@@ -8,7 +8,7 @@ function ProjectCard({ project }) {
   const codeLabel = project.githubLabel || 'View Code'
 
   return (
-    <article className="project-card glass fade-in">
+    <article className="project-card surface fade-in">
       {project.imageSrc && !imageFailed ? (
         <img
           className="project-thumb project-thumb-image"
@@ -23,25 +23,41 @@ function ProjectCard({ project }) {
           <span>{project.title}</span>
         </div>
       )}
+      <div className="project-topline">
+        <p className="project-kicker">{project.kicker || project.role}</p>
+        {(project.role || project.timeline) && (
+          <p className="project-meta">
+            {[project.role, project.timeline].filter(Boolean).join(' | ')}
+          </p>
+        )}
+      </div>
       <h3 className="project-title">{project.title}</h3>
-      {(project.role || project.timeline) && (
-        <p className="project-meta">
-          {[project.role, project.timeline].filter(Boolean).join(' | ')}
-        </p>
-      )}
       <div className="project-tags">
         {project.tags.map((tag) => (
           <Tag key={tag}>{tag}</Tag>
         ))}
       </div>
       <p className="project-desc">{project.description}</p>
-      <p className="project-problem">{project.problem}</p>
-      {project.outcome && <p className="project-outcome">{project.outcome}</p>}
-      <ul className="project-highlights">
-        {project.highlights.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+      <div className="project-story">
+        <div>
+          <h4>What I built</h4>
+          <p className="project-problem">{project.problem}</p>
+        </div>
+        {project.outcome && (
+          <div>
+            <h4>Why it matters</h4>
+            <p className="project-outcome">{project.outcome}</p>
+          </div>
+        )}
+      </div>
+      <div className="project-highlights-wrap">
+        <h4>Key features</h4>
+        <ul className="project-highlights">
+          {project.highlights.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
       {(project.demo || project.github) && (
         <div className="project-actions">
           {project.demo && (

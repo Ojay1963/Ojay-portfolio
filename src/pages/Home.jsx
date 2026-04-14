@@ -1,114 +1,125 @@
 import { useState } from 'react'
 import Button from '../components/Button.jsx'
+import InfoCard from '../components/InfoCard.jsx'
 import ProjectCard from '../components/ProjectCard.jsx'
 import SectionTitle from '../components/SectionTitle.jsx'
-import Tag from '../components/Tag.jsx'
-import InfoCard from '../components/InfoCard.jsx'
+import ServiceCard from '../components/ServiceCard.jsx'
 import SkillCard from '../components/SkillCard.jsx'
+import Tag from '../components/Tag.jsx'
 import ojCorporate from '../components/images/Oj Corporate.jpg'
 
 const contactEmail = 'ojaydev2010@gmail.com'
 const githubProfile = 'https://github.com/Ojay1963'
 const linkedInProfile = 'https://www.linkedin.com/in/onos-eloho-7703a0aa'
+const whatsappLink = 'https://wa.me/2347082206013'
 
-const heroTags = ['React', 'Next.js', 'Node.js', 'MongoDB', 'Payments', 'SEO', 'APIs']
+const heroTags = ['React', 'Next.js', 'Node.js', 'MongoDB', 'REST APIs', 'Payments', 'SEO']
+
+const valuePoints = [
+  {
+    title: 'Available for freelance and contract work',
+    description: 'Open to startup builds, feature delivery, product refactors, and long-term remote roles.',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M12 3L14.9 8.6L21 9.5L16.5 13.8L17.6 20L12 17L6.4 20L7.5 13.8L3 9.5L9.1 8.6L12 3Z" stroke="currentColor" strokeWidth="1.35" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Fast turnaround with product thinking',
+    description: 'I focus on what moves the product forward, not just shipping tickets without context.',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M12 8V12L15 15" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.4" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Clean, maintainable production code',
+    description: 'Built for reliability, scalability, and handoff clarity across frontend and backend systems.',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" strokeWidth="1.4" />
+      </svg>
+    ),
+  },
+]
 
 const featuredProject = {
-  eyebrow: 'Featured Build',
+  eyebrow: 'Featured product build',
   title: 'ToolsHub',
-  summary:
-    'A searchable tools platform that brings image, PDF, text, generator, calculator, converter, and developer utilities into one polished product.',
+  summary: 'A search-first utility platform that turns scattered micro-tools into a structured product users can actually discover and use.',
   problem:
-    'The challenge was organizing a broad utility catalog without making discovery feel overwhelming. Users needed a fast way to search, browse categories, and land directly on useful tool pages with clear intent.',
+    'Users needed a faster way to find the right image, PDF, text, calculator, converter, or developer tool without digging through a messy directory experience.',
   approach: [
-    'Built a Next.js frontend that groups utilities into clear categories while keeping navigation simple and quick to scan.',
-    'Designed search-first discovery so users can find the right tool by task, keyword, or category with less friction.',
-    'Structured the platform for SEO-friendly tool pages, helping individual utilities stand on their own and attract targeted traffic.',
+    'Designed a search-led discovery flow so users can reach the right tool by intent, keyword, or category in fewer steps.',
+    'Structured pages for SEO visibility, giving each tool a stronger chance to attract targeted traffic from search.',
+    'Built a scalable frontend architecture that keeps a large utility catalog easy to browse and simple to extend.',
   ],
-  stack: ['Next.js', 'React', 'Tailwind CSS', 'SEO', 'Utilities'],
+  stack: ['Next.js', 'React', 'Tailwind CSS', 'Search UX', 'SEO'],
+  impact: [
+    'Makes a large content surface feel organized instead of overwhelming.',
+    'Supports both direct search landings and category-based browsing.',
+    'Shows how I build for usability, discoverability, and growth at the same time.',
+  ],
   demo: 'https://toolbox-hub-amber.vercel.app/',
   github: 'https://github.com/Ojay1963/toolbox-hub.git',
 }
 
 const projects = [
   {
-    title: 'ToolsHub',
-    tags: ['Next.js', 'React', 'Tailwind CSS', 'SEO', 'Utilities'],
-    role: 'Frontend Developer',
-    timeline: 'Multi-page utilities platform',
-    description:
-      'A free online tools platform that helps users handle image, PDF, text, generator, calculator, converter, and developer workflows from one searchable directory.',
-    problem:
-      'The challenge was organizing a large collection of utility pages in a way that still feels simple to browse, fast to search, and clear for users landing on individual tool pages from search engines.',
-    outcome:
-      'Demonstrates scalable frontend structure with category browsing, internal search, SEO-ready pages, and a broad utility catalog.',
-    highlights: [
-      'Search-driven directory for quickly finding the right tool by task or keyword',
-      'Category-based browsing across images, PDFs, text, generators, calculators, converters, and developer tools',
-      'SEO-focused tool architecture with individually discoverable utility pages',
-    ],
-    imageSrc: '/project-previews/toolbox-hub.png',
-    imageAlt: 'Screenshot preview of the ToolsHub online tools platform',
-    demo: 'https://toolbox-hub-amber.vercel.app/',
-    github: 'https://github.com/Ojay1963/toolbox-hub.git',
-  },
-  {
     title: 'Delxta',
+    kicker: 'Reservations, ordering, and payments',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Payments'],
     role: 'Full Stack Developer',
-    timeline: 'End-to-end product development',
-    description:
-      'A restaurant platform where customers can reserve tables, place delivery orders, pay online, and schedule meals in advance for dine-in.',
-    problem:
-      'The product needed to combine restaurant seating, online ordering, and payment in one flow, so customers can book ahead, pay, order for delivery, or prepare meals before arriving.',
-    outcome:
-      'Demonstrates end-to-end product execution by connecting reservations, ordering, and payments in one workflow.',
+    timeline: 'Restaurant product platform',
+    description: 'A restaurant platform that combines table booking, delivery ordering, online payments, and advance meal scheduling in one customer journey.',
+    problem: 'I built the full flow for reservations, orders, payments, and backend activity management so customers can book or buy without friction.',
+    outcome: 'This matters because the product reduces operational gaps between dine-in planning and digital ordering, creating a more useful customer experience.',
     highlights: [
-      'Table reservation flow for customers planning to dine in',
-      'Ordering and payment flow for delivery and advance meal requests',
-      'Backend structure for bookings, food orders, payments, and customer activity',
+      'Table reservation flow for dine-in planning',
+      'Ordering and payment experience for delivery and scheduled meals',
+      'Backend support for bookings, food orders, payments, and customer activity',
     ],
     imageSrc: '/project-previews/delxta.png',
-    imageAlt: 'Screenshot preview of the Delxta restaurant website',
+    imageAlt: 'Screenshot preview of the Delxta restaurant platform',
     demo: 'https://delxta.vercel.app',
     github: 'https://github.com/Ojay1963/Delxta.git',
   },
   {
     title: 'Pro-Find',
-    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Payments'],
+    kicker: 'Marketplace architecture for property discovery',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Role-based listings'],
     role: 'Full Stack Developer',
-    timeline: 'Marketplace listing workflow',
-    description:
-      'An open real estate marketplace where agents and property owners can pay to list properties for house hunters to discover.',
-    problem:
-      'The product needed to support two-sided marketplace activity: paid property listings from agents or owners, and a clean search experience for people looking for homes.',
-    outcome:
-      'Demonstrates marketplace architecture through paid listings, search-focused browsing, and role-based listing flows.',
+    timeline: 'Real estate marketplace',
+    description: 'An open property marketplace where agents and owners can pay to list homes while buyers and renters browse with clarity.',
+    problem: 'I built paid listing flows and a clean search experience to support both sides of the marketplace without making discovery harder for house hunters.',
+    outcome: 'This matters because a two-sided marketplace only works when publishing, search, and listing quality feel equally trustworthy.',
     highlights: [
-      'Listing flow for agents and property owners to publish properties',
-      'Property discovery experience designed for house hunters',
-      'Backend structure for paid listings, account flows, and property data management',
+      'Paid listing flow for agents and property owners',
+      'Property discovery experience for buyers and renters',
+      'Backend structure for listing management, accounts, and property data',
     ],
     imageSrc: '/project-previews/pro-find.png',
-    imageAlt: 'Screenshot preview of the ProFind real estate marketplace',
+    imageAlt: 'Screenshot preview of the Pro-Find real estate marketplace',
     demo: 'https://pro-find-nxw1.vercel.app',
     github: 'https://github.com/Ojay1963/Pro-find.git',
   },
   {
     title: 'Naija Tax Calculator',
+    kicker: 'Tax estimation with paid service conversion',
     tags: ['React', 'Tax Tech', 'PAYE', 'Paystack', 'Authentication'],
     role: 'Full Stack Developer',
-    timeline: 'Calculator and paid-service workflow',
-    description:
-      'A Nigerian tax platform that helps users estimate PAYE and company tax, then move into paid reports or consultations when they need reviewed output or human guidance.',
-    problem:
-      'The challenge was making tax estimation easier for users while still supporting more serious follow-up needs like printable reports, consultations, account management, and payment-backed service requests.',
-    outcome:
-      'Demonstrates product depth by combining tax estimation, educational guidance, account features, and paid service workflows.',
+    timeline: 'Calculator and service workflow',
+    description: 'A Nigerian tax platform that helps users calculate PAYE and company tax, then move into paid reports or consultations when needed.',
+    problem: 'I combined calculation logic, educational guidance, payments, and account flows so users can go from estimate to professional support in one system.',
+    outcome: 'This matters because the product turns a utility into a revenue path by connecting helpful free tooling with premium follow-up services.',
     highlights: [
-      'Calculator flows for Nigerian PAYE and company-tax estimates with practical result breakdowns',
-      'Paid report and consultation workflows connected to Paystack for premium tax services',
-      'Account system with registration, email verification, password reset, and dashboard access',
+      'PAYE and company tax estimate flows with guided breakdowns',
+      'Paid reports and consultation workflows connected to Paystack',
+      'Registration, email verification, password reset, and dashboard access',
     ],
     imageSrc: '/project-previews/naija-tax-calculator.png',
     imageAlt: 'Screenshot preview of the Naija Tax Calculator application',
@@ -117,111 +128,148 @@ const projects = [
   },
   {
     title: 'Ojay Motors',
+    kicker: 'Premium vehicle discovery and enquiry experience',
     tags: ['React', 'Automotive', 'Inventory', 'Finance UI', 'Booking'],
     role: 'Frontend Developer',
-    timeline: 'Vehicle discovery platform',
-    description:
-      'A luxury vehicle platform for browsing premium cars in Nigeria, exploring detailed listings, and moving from discovery into finance and test-drive interest.',
-    problem:
-      'The product needed to present premium inventory in a way that feels polished and informative, while also helping users compare vehicles, estimate financing, and request appointments without losing context.',
-    outcome:
-      'Demonstrates a feature-rich vehicle discovery experience with filtering, detailed listings, finance estimation, compare flows, and appointment booking.',
+    timeline: 'Automotive inventory platform',
+    description: 'A luxury vehicle platform for browsing premium cars, comparing inventory, estimating finance options, and booking test-drive interest.',
+    problem: 'I built a polished vehicle discovery experience with filtering, listing detail views, finance estimation, and appointment actions so users can move from browsing to intent with less friction.',
+    outcome: 'This matters because automotive products need both premium presentation and practical decision-making tools to help buyers compare options and take the next step.',
     highlights: [
-      'Inventory browsing with search, make and body-type filters, and price-range controls',
-      'Vehicle detail pages with specs, gallery views, finance estimator, and compare or save actions',
-      'Test-drive booking flow and dealership-style content for showroom, services, and contact journeys',
+      'Inventory browsing with search, make and body-type filters, and price controls',
+      'Vehicle detail pages with specs, gallery views, finance estimator, and compare actions',
+      'Test-drive booking flow and dealership-style content for showroom and service journeys',
     ],
     imageSrc: '/project-previews/ojay-motors.png',
-    imageAlt: 'Screenshot preview of the Ojay Motors luxury vehicle website',
+    imageAlt: 'Screenshot preview of the Ojay Motors luxury vehicle platform',
     demo: 'https://cars-azure-gamma.vercel.app/',
     github: 'https://github.com/Ojay1963/Cars.git',
   },
-  {
-    title: 'OJ Devices',
-    tags: ['React', 'E-commerce', 'Payments', 'Authentication', 'Admin Dashboard'],
-    role: 'Full Stack Developer',
-    timeline: 'Catalog and checkout workflow',
-    description:
-      'An online store for premium laptops and accessories with product discovery, cart and checkout flows, account management, and delivery-focused ordering.',
-    problem:
-      'The product needed to make laptop and accessory shopping feel organized from browsing to payment, while also supporting customer accounts, wishlists, order tracking, and store-side management in one system.',
-    outcome:
-      'Demonstrates practical e-commerce architecture with searchable catalog flows, payment callbacks, OTP-based authentication, and admin tooling.',
-    highlights: [
-      'Product catalog with search, filters, wishlist, comparison, and category browsing for laptops and accessories',
-      'Cart, checkout, payment verification, and account order-tracking flows for customers',
-      'Admin dashboard for managing products, orders, users, uploads, and store settings',
-    ],
-    imageSrc: '/project-previews/oj-devices.png',
-    imageAlt: 'Screenshot preview of the OJ Devices laptop and accessories store',
-    demo: 'https://laptop-acessory-client.vercel.app/',
-    github: 'https://github.com/Ojay1963/LaptopAcessory.git',
-  },
 ]
 
-const infoCards = [
+const services = [
   {
-    title: 'Product Builds',
-    description: 'Building marketplaces, booking systems, e-commerce flows, and utility platforms with practical user value.',
+    title: 'Full Stack Web Development',
+    description: 'I design and build complete web applications from frontend interface to backend logic, data models, and deployment.',
+    outcome: 'Best for startups and businesses that need a dependable product partner from idea to launch.',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M4 5H20V19H4V5Z"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinejoin="round"
-        />
-        <path d="M8 9H16M8 13H14" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M4 6H20V16H4V6Z" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M9 20H15" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        <path d="M12 16V20" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
       </svg>
     ),
   },
   {
-    title: 'Commerce & Payments',
-    description: 'Designing product catalogs, checkout journeys, payment flows, and customer account experiences.',
+    title: 'Frontend Development',
+    description: 'I create responsive, polished user interfaces that feel credible, fast, and easy to navigate across devices.',
+    outcome: 'Ideal when you need a better product experience, stronger conversion paths, or a premium redesign.',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <ellipse cx="12" cy="6" rx="7" ry="3" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M5 6V12C5 13.7 8.1 15 12 15C15.9 15 19 13.7 19 12V6" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M5 12V18C5 19.7 8.1 21 12 21C15.9 21 19 19.7 19 18V12" stroke="currentColor" strokeWidth="1.4" />
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M5 5L3 12L5 19" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M19 5L21 12L19 19" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M14 4L10 20" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
       </svg>
     ),
   },
   {
-    title: 'Search & Discovery',
-    description: 'Improving how users browse listings, discover tools, filter content, and complete key tasks.',
+    title: 'Backend and API Integration',
+    description: 'I build APIs, authentication flows, dashboards, and third-party integrations that support real-world product workflows.',
+    outcome: 'Useful when your app needs reliable business logic, payments, accounts, or data handling behind the scenes.',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-        <circle cx="8" cy="7" r="1" fill="currentColor" />
-        <circle cx="8" cy="12" r="1" fill="currentColor" />
-        <circle cx="8" cy="17" r="1" fill="currentColor" />
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <ellipse cx="12" cy="6" rx="6" ry="2.5" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M6 6V12C6 13.4 8.7 14.5 12 14.5C15.3 14.5 18 13.4 18 12V6" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M6 12V18C6 19.4 8.7 20.5 12 20.5C15.3 20.5 18 19.4 18 18V12" stroke="currentColor" strokeWidth="1.4" />
       </svg>
     ),
   },
   {
-    title: 'Auth & Admin Systems',
-    description: 'Building account flows, OTP verification, dashboards, and admin controls for production-ready apps.',
+    title: 'Dashboards and Admin Panels',
+    description: 'I build internal tools that help teams manage products, users, orders, listings, content, and operational workflows.',
+    outcome: 'A strong fit when the public-facing app is only half the product and your team needs internal efficiency too.',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10" stroke="currentColor" strokeWidth="1.4" />
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <rect x="4" y="4" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.4" />
+        <rect x="13" y="4" width="7" height="4" rx="1.5" stroke="currentColor" strokeWidth="1.4" />
+        <rect x="13" y="10" width="7" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.4" />
+        <rect x="4" y="13" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.4" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Landing Pages for Startups',
+    description: 'I craft conversion-focused landing pages that clearly communicate value and move visitors toward booking, buying, or contacting.',
+    outcome: 'Helpful for founders who need sharper positioning, stronger trust signals, and better first impressions.',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M4 19L20 5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        <path d="M7 5H20V18" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Bug Fixing and Performance Optimization',
+    description: 'I improve sluggish interfaces, unstable flows, and messy code paths so your product feels faster and more dependable.',
+    outcome: 'Best when an existing product needs cleanup, debugging, accessibility improvements, or frontend/backend performance work.',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M12 3V7" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        <path d="M8 7H16V13C16 15.2 14.2 17 12 17C9.8 17 8 15.2 8 13V7Z" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M9 20H15" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
       </svg>
     ),
   },
 ]
 
 const skills = [
-  { title: 'Frontend', items: ['React', 'Next.js', 'JavaScript', 'HTML', 'CSS', 'Tailwind'] },
-  { title: 'Backend', items: ['Node.js', 'Express', 'REST APIs', 'JWT Authentication', 'OTP Flows'] },
-  { title: 'Database & Infra', items: ['MongoDB', 'Mongoose', 'MySQL', 'Vercel', 'Netlify'] },
-  { title: 'Product Systems', items: ['Payments', 'SEO', 'Marketplaces', 'Booking Flows', 'Admin Dashboards'] },
+  { title: 'Frontend', items: ['React', 'Next.js', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS'] },
+  { title: 'Backend', items: ['Node.js', 'Express', 'REST APIs', 'JWT Auth', 'OTP Flows', 'Business Logic'] },
+  { title: 'Database', items: ['MongoDB', 'Mongoose', 'MySQL', 'Schema Design', 'Data Modeling'] },
+  { title: 'Tools and Deployment', items: ['Vite', 'Vercel', 'Netlify', 'FormSubmit', 'Responsive QA'] },
+  { title: 'Version Control', items: ['Git', 'GitHub', 'Branch workflows', 'Deployment-ready handoff'] },
+]
+
+const workflow = [
+  {
+    step: '01',
+    title: 'Clarify the product goal',
+    description: 'I start by understanding the business problem, user flow, and success metric so the build solves something real.',
+  },
+  {
+    step: '02',
+    title: 'Design the right system',
+    description: 'I map the interface, data flow, and technical structure needed to keep the product usable and scalable.',
+  },
+  {
+    step: '03',
+    title: 'Build with production quality',
+    description: 'I ship responsive frontend experiences, clean backend logic, and reusable components that are easier to maintain.',
+  },
+  {
+    step: '04',
+    title: 'Launch and improve',
+    description: 'I test the details, refine performance, and keep the final result focused on reliability, trust, and conversion.',
+  },
+]
+
+const trustStats = [
+  { value: '6+', label: 'production-style product builds' },
+  { value: '5', label: 'core solution types across commerce, tools, SaaS, and marketplaces' },
+  { value: '100%', label: 'focus on responsive, maintainable delivery' },
+]
+
+const aboutHighlights = [
+  'I build real products, not just disconnected UI demos.',
+  'I care deeply about performance, usability, and long-term maintainability.',
+  'I work well with startups, founders, businesses, and remote teams that need a reliable builder.',
 ]
 
 const contactItems = [
   { label: 'Email', value: contactEmail, href: `mailto:${contactEmail}` },
-  { label: 'Phone', value: '07082206013', href: 'tel:07082206013' },
-  { label: 'GitHub', value: 'github.com/Ojay1963', href: githubProfile },
   { label: 'LinkedIn', value: 'linkedin.com/in/onos-eloho-7703a0aa', href: linkedInProfile },
+  { label: 'GitHub', value: 'github.com/Ojay1963', href: githubProfile },
+  { label: 'WhatsApp', value: '+234 708 220 6013', href: whatsappLink },
 ]
 
 function Home() {
@@ -290,86 +338,91 @@ function Home() {
 
   return (
     <div id="top">
-      <section className="container hero fade-in">
-        <div>
-          <p className="hero-tagline">Hello, I&apos;m</p>
-          <h1 className="hero-title">
-            Onos Jephtha <br />
-            Eloho
-          </h1>
-          <p className="hero-role">I build full stack web products with clear business value.</p>
-          <p className="hero-text">
-            I&apos;m Onos Eloho, a full stack JavaScript developer focused on building production-ready web
-            applications with React, Next.js, Node.js, and MongoDB. I design and ship marketplaces, booking
-            systems, e-commerce platforms, admin dashboards, and SEO-friendly utility products with strong
-            frontend usability and reliable backend architecture.
-          </p>
-          <div className="tag-row">
-            {heroTags.map((tag) => (
-              <Tag key={tag}>{tag}</Tag>
-            ))}
+      <section className="hero-shell">
+        <div className="container hero">
+          <div className="hero-copy fade-in">
+            <div className="availability-pill">
+              <span className="availability-dot" />
+              Available for freelance and contract work
+            </div>
+            <p className="hero-tagline">Full stack developer for startups, businesses, and product teams</p>
+            <h1 className="hero-title">Full Stack Developer Building Fast, Scalable Web Products for Startups and Businesses</h1>
+            <p className="hero-role">
+              I design and build responsive, production-ready web applications with modern frontend and backend technologies.
+            </p>
+            <p className="hero-text">
+              I help teams turn product ideas, redesigns, and complex workflows into credible web experiences that are easier to use, easier to maintain, and ready for real users.
+            </p>
+            <div className="tag-row">
+              {heroTags.map((tag) => (
+                <Tag key={tag}>{tag}</Tag>
+              ))}
+            </div>
+            <div className="hero-actions">
+              <Button href="#projects" variant="primary">
+                View Projects
+              </Button>
+              <Button href={`mailto:${contactEmail}`} variant="ghost">
+                Hire Me
+              </Button>
+              <Button href="#contact" variant="ghost">
+                Contact Me
+              </Button>
+            </div>
+            <div className="hero-proof">
+              <span>Responsive communication</span>
+              <span>Fast turnaround</span>
+              <span>Clean, maintainable code</span>
+            </div>
           </div>
-          <div className="hero-actions">
-            <Button href="#projects" variant="primary">
-              See My Work
-            </Button>
-            <Button href="#contact" variant="ghost">
-              Let&apos;s Work Together
-            </Button>
-          </div>
-          <div className="social-row">
-            <a className="icon-btn" href={githubProfile} target="_blank" rel="noreferrer" aria-label="GitHub">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M9 19C4 20.5 4 16.5 2 16M22 16V20C22 21.1 21.1 22 20 22H4C2.9 22 2 21.1 2 20V4C2 2.9 2.9 2 4 2H14L22 10V16Z"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
-            <a
-              className="icon-btn"
-              href={linkedInProfile}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M16 8C18.2 8 20 9.8 20 12V19H16V12C16 10.9 15.1 10 14 10C12.9 10 12 10.9 12 12V19H8V12C8 9.8 9.8 8 12 8H16Z"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path d="M4 9H4.01" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                <path d="M4 13V19" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-              </svg>
-            </a>
-            <a className="icon-btn" href={`mailto:${contactEmail}`} aria-label="Email">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M4 6H20V18H4V6Z"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                  strokeLinejoin="round"
-                />
-                <path d="M4 7L12 13L20 7" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-              </svg>
-            </a>
+
+          <div className="hero-visual fade-in">
+            <article className="hero-card">
+              <div className="hero-card-image">
+                <img src={ojCorporate} alt="Portrait of Onos Jephtha Eloho" />
+              </div>
+              <div className="hero-card-panel">
+                <p>Trusted to build</p>
+                <h2>Full-stack products with clear user flows and serious delivery quality.</h2>
+                <div className="hero-mini-stats">
+                  {trustStats.map((stat) => (
+                    <div key={stat.label}>
+                      <strong>{stat.value}</strong>
+                      <span>{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-        <div className="hero-card">
-          <img src={ojCorporate} alt="Onos Jephtha Eloho" />
+      </section>
+
+      <section className="section" id="intro">
+        <div className="container">
+          <SectionTitle
+            eyebrow="Why clients hire me"
+            title="I build products that solve real user and business problems"
+            description="Beyond writing code, I focus on creating clear workflows, dependable architecture, and polished experiences that help teams launch with confidence."
+            align="center"
+          />
+          <div className="info-grid value-grid">
+            {valuePoints.map((card) => (
+              <InfoCard key={card.title} {...card} />
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="section" id="projects">
         <div className="container">
-          <SectionTitle>Full Stack Projects</SectionTitle>
-          <article className="featured-project glass fade-in">
+          <SectionTitle
+            eyebrow="Featured projects"
+            title="Selected full-stack work with stronger storytelling"
+            description="Each project is presented around the problem solved, what I built, and why the outcome matters."
+          />
+
+          <article className="featured-project surface fade-in">
             <div>
               <p className="featured-project-eyebrow">{featuredProject.eyebrow}</p>
               <h3 className="featured-project-title">{featuredProject.title}</h3>
@@ -381,23 +434,35 @@ function Home() {
                 ))}
               </div>
             </div>
+
             <div className="featured-project-panel">
-              <h4>What I built</h4>
-              <ul className="featured-project-list">
-                {featuredProject.approach.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <div>
+                <h4>What I built</h4>
+                <ul className="featured-project-list">
+                  {featuredProject.approach.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4>Why it matters</h4>
+                <ul className="featured-project-list">
+                  {featuredProject.impact.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
               <div className="project-actions">
                 <Button href={featuredProject.demo} variant="primary">
                   Live Demo
                 </Button>
                 <Button href={featuredProject.github} variant="ghost">
-                  View Code
+                  GitHub
                 </Button>
               </div>
             </div>
           </article>
+
           <div className="projects-grid">
             {projects.map((project) => (
               <ProjectCard key={project.title} project={project} />
@@ -406,40 +471,28 @@ function Home() {
         </div>
       </section>
 
-      <section className="section" id="about">
+      <section className="section" id="services">
         <div className="container">
-          <SectionTitle>About Me</SectionTitle>
-          <div className="about-grid">
-            <div className="fade-in">
-              <p className="muted">
-                I&apos;m a full stack JavaScript developer focused on building modern web products from idea
-                to deployment. My portfolio includes restaurant booking platforms, real estate marketplaces,
-                e-commerce storefronts, automotive inventory experiences, tax tools, and SEO-driven utility
-                products.
-              </p>
-              <p className="muted">
-                I enjoy solving product problems across frontend experience and backend logic, helping users
-                browse inventory, make payments, manage accounts, request services, and find the right tool
-                quickly. I care about clarity, structure, and making complex workflows feel simple.
-              </p>
-              <p className="muted">
-                My strongest stack includes React, Next.js, Node.js, Express, MongoDB, authentication, and
-                payment-backed product flows. I&apos;m currently open to remote full stack roles where I can
-                continue building useful, scalable customer-facing products.
-              </p>
-            </div>
-            <div className="info-grid">
-              {infoCards.map((card) => (
-                <InfoCard key={card.title} {...card} />
-              ))}
-            </div>
+          <SectionTitle
+            eyebrow="Services"
+            title="What I can help you build"
+            description="Practical development services focused on shipping better products, improving customer experience, and supporting business growth."
+          />
+          <div className="services-grid">
+            {services.map((service) => (
+              <ServiceCard key={service.title} {...service} />
+            ))}
           </div>
         </div>
       </section>
 
       <section className="section" id="skills">
         <div className="container">
-          <SectionTitle>Skills</SectionTitle>
+          <SectionTitle
+            eyebrow="Tech stack"
+            title="Skills grouped around real product delivery"
+            description="A modern full-stack toolkit for frontend interfaces, backend logic, data handling, deployment, and collaboration."
+          />
           <div className="skills-grid">
             {skills.map((skill) => (
               <SkillCard key={skill.title} {...skill} />
@@ -450,18 +503,92 @@ function Home() {
 
       <section className="section" id="experience">
         <div className="container">
-          <SectionTitle>Experience</SectionTitle>
-          <div className="experience">
-            <div className="experience-card glass fade-in">
-              <h4>Full Stack Developer</h4>
-              <small>Independent Projects</small>
-              <div className="muted">2025 - Present</div>
-              <ul className="experience-list">
-                <li>Built and deployed product-focused applications including booking systems, marketplaces, online stores, and service platforms.</li>
-                <li>Implemented authentication, OTP verification, dashboards, and payment-backed user journeys across multiple projects.</li>
-                <li>Designed APIs and data models for reservations, property listings, tax calculations, orders, and customer accounts.</li>
-                <li>Deployed frontend applications on Vercel and Netlify with working demos and production-style presentation.</li>
+          <SectionTitle
+            eyebrow="Workflow"
+            title="How I approach product work"
+            description="A simple process that keeps projects grounded in user value, technical quality, and clear communication."
+          />
+          <div className="workflow-grid">
+            {workflow.map((item) => (
+              <article key={item.step} className="workflow-card surface fade-in">
+                <span>{item.step}</span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="about">
+        <div className="container about-layout">
+          <div>
+            <SectionTitle
+              eyebrow="About"
+              title="A full stack developer focused on business-ready digital products"
+              description="I build web products that are meant to work in the real world, not just look good in a portfolio screenshot."
+            />
+            <div className="about-copy fade-in">
+              <p>
+                I&apos;m a full stack developer who works across interface design, frontend engineering, backend logic, and product structure to build experiences that feel clear, trustworthy, and ready for growth.
+              </p>
+              <p>
+                My work spans marketplaces, restaurant platforms, tax tools, e-commerce storefronts, utility products, and dashboards. I enjoy turning complicated requirements into simpler flows that users can understand quickly.
+              </p>
+              <p>
+                Whether I&apos;m working with a founder, startup team, or business owner, I care about building something useful: fast enough to ship, polished enough to inspire trust, and structured well enough to maintain over time.
+              </p>
+            </div>
+            <div className="about-points">
+              {aboutHighlights.map((item) => (
+                <div key={item} className="about-point">
+                  <span />
+                  <p>{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <aside className="about-side">
+            <div className="surface trust-panel fade-in">
+              <p className="section-eyebrow">Why work with me</p>
+              <h3>Built for clarity, momentum, and dependable delivery.</h3>
+              <ul className="trust-list">
+                <li>Strong communication from kickoff to launch</li>
+                <li>Thoughtful UX and conversion-aware frontend decisions</li>
+                <li>Maintainable code that is easier to extend and support</li>
+                <li>Comfortable building customer-facing and admin-side systems</li>
               </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section className="section" id="testimonials">
+        <div className="container">
+          <SectionTitle
+            eyebrow="Trust signals"
+            title="A portfolio positioned for paid work"
+            description="Clear proof points that support credibility for freelance clients, remote teams, and product-focused businesses."
+            align="center"
+          />
+          <div className="trust-grid">
+            <div className="surface testimonial-card fade-in">
+              <p className="testimonial-quote">
+                "I bring product thinking into development work, with a focus on usability, strong execution, and clear communication from start to finish."
+              </p>
+              <div className="testimonial-meta">
+                <strong>How I work</strong>
+                <span>Strategic thinking, dependable delivery, and a strong bias toward useful outcomes.</span>
+              </div>
+            </div>
+            <div className="surface stats-panel fade-in">
+              {trustStats.map((stat) => (
+                <div key={stat.label} className="stat-row">
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -469,79 +596,67 @@ function Home() {
 
       <section className="section" id="contact">
         <div className="container">
-          <SectionTitle>Contact</SectionTitle>
-          <div className="contact-grid">
-            <div className="fade-in">
-              <p className="muted">
-                I&apos;m currently open to remote full stack opportunities and product-focused freelance
-                work. Feel free to reach out if you&apos;d like to discuss a marketplace, dashboard,
-                booking platform, e-commerce product, or utility platform.
+          <div className="contact-cta surface fade-in">
+            <div className="contact-cta-copy">
+              <p className="section-eyebrow">Contact</p>
+              <h2>Need a full stack developer who can build, refine, or ship your next product?</h2>
+              <p>
+                I&apos;m open to freelance projects, contract roles, and remote opportunities. If you need a polished interface, a working full-stack product, or help improving an existing app, let&apos;s talk.
               </p>
               <div className="contact-list">
                 {contactItems.map((item) => (
-                  <a key={item.label} className="contact-card glass" href={item.href}>
-                    <div className="icon-btn">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                        <path
-                          d="M4 6H20V18H4V6Z"
-                          stroke="currentColor"
-                          strokeWidth="1.4"
-                          strokeLinejoin="round"
-                        />
-                        <path d="M4 7L12 13L20 7" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-                      </svg>
-                    </div>
+                  <a key={item.label} className="contact-card" href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noreferrer' : undefined}>
                     <div>
-                      <div>{item.label}</div>
-                      <div className="muted">{item.value}</div>
+                      <div className="contact-label">{item.label}</div>
+                      <div className="contact-value">{item.value}</div>
                     </div>
                   </a>
                 ))}
               </div>
             </div>
-            <form className="form glass fade-in" onSubmit={handleSubmit} noValidate>
+
+            <form className="form" onSubmit={handleSubmit} noValidate>
               <div className="form-header">
-                <p className="form-eyebrow">Send a Message</p>
-                <h3>Let&apos;s talk about your project</h3>
-                <p className="muted">
-                  Share a few details and I&apos;ll get back to you as soon as I can.
-                </p>
+                <p className="form-eyebrow">Start a conversation</p>
+                <h3>Tell me what you&apos;re building</h3>
+                <p className="muted">Share a few details and I&apos;ll reply as soon as I can.</p>
               </div>
+
               <div className="form-field">
                 <label htmlFor="name">Full Name</label>
                 <input
                   id="name"
                   name="name"
-                  placeholder="Your full name"
                   value={formValues.name}
                   onChange={handleChange}
                 />
                 {errors.name && <div className="error">{errors.name}</div>}
               </div>
+
               <div className="form-field">
                 <label htmlFor="email">Email Address</label>
                 <input
                   id="email"
                   type="email"
                   name="email"
-                  placeholder="you@example.com"
                   value={formValues.email}
                   onChange={handleChange}
                 />
                 {errors.email && <div className="error">{errors.email}</div>}
               </div>
+
               <div className="form-field">
                 <label htmlFor="message">Project Details</label>
                 <textarea
                   id="message"
                   name="message"
                   rows="5"
-                  placeholder="Tell me about the product, feature, or role you have in mind."
                   value={formValues.message}
                   onChange={handleChange}
                 />
                 {errors.message && <div className="error">{errors.message}</div>}
               </div>
+
               <Button type="submit" variant="primary" className="form-submit">
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
