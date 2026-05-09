@@ -64,7 +64,7 @@ const featuredProject = {
     'Supports both direct search landings and category-based browsing.',
     'Shows how I build for usability, discoverability, and growth at the same time.',
   ],
-  demo: 'https://toolbox-hub-amber.vercel.app/',
+  demo: 'https://www.toolboxhubapp.com/',
   github: 'https://github.com/Ojay1963/toolbox-hub.git',
 }
 
