@@ -19,15 +19,15 @@ main {
 
 .section {
   position: relative;
-  padding: 96px 0;
-  scroll-margin-top: 100px;
+  padding: 64px 0;
+  scroll-margin-top: 90px;
 }
 
 .surface {
   background: linear-gradient(180deg, rgba(12, 17, 27, 0.92), rgba(8, 12, 20, 0.98));
   border: 1px solid rgba(148, 163, 184, 0.14);
   box-shadow: var(--shadow);
-  border-radius: 28px;
+  border-radius: 24px;
 }
 
 body.light .surface {
@@ -41,8 +41,8 @@ body.light .surface {
 
 .section-heading {
   display: grid;
-  gap: 14px;
-  margin-bottom: 34px;
+  gap: 10px;
+  margin-bottom: 24px;
 }
 
 .section-heading-center {
@@ -62,10 +62,11 @@ body.light .surface {
 .section-title {
   margin: 0;
   max-width: 12ch;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1.05;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
 .section-heading-center .section-title,
@@ -98,8 +99,8 @@ body.light .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 16px 0;
+  gap: 14px;
+  padding: 12px 0;
 }
 
 .brand {
@@ -152,7 +153,7 @@ body.light .nav-links {
 }
 
 .nav-links a {
-  padding: 9px 14px;
+  padding: 8px 12px;
   border-radius: 999px;
   font-size: 0.9rem;
   color: var(--muted);
@@ -202,16 +203,16 @@ body.light .icon-btn {
 
 .primary-btn,
 .ghost-btn {
-  min-height: 48px;
+  min-height: 44px;
   border-radius: 999px;
-  padding: 12px 20px;
+  padding: 10px 16px;
   font-size: 0.95rem;
   font-weight: 600;
   border: 1px solid transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
@@ -311,9 +312,9 @@ body.light .mobile-menu {
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-  gap: 48px;
+  gap: 32px;
   align-items: center;
-  min-height: calc(100vh - 120px);
+  min-height: 80vh;
 }
 
 .hero-copy {
@@ -325,8 +326,8 @@ body.light .mobile-menu {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 22px;
-  padding: 10px 14px;
+  margin-bottom: 16px;
+  padding: 8px 12px;
   border-radius: 999px;
   font-size: 0.82rem;
   color: var(--text);
@@ -361,7 +362,7 @@ body.light .mobile-menu {
 }
 
 .hero-role {
-  margin: 22px 0 0;
+  margin: 16px 0 0;
   max-width: 19ch;
   font-size: clamp(1.18rem, 2vw, 1.45rem);
   line-height: 1.35;
@@ -369,18 +370,18 @@ body.light .mobile-menu {
 }
 
 .hero-text {
-  margin: 18px 0 0;
+  margin: 14px 0 0;
   max-width: 60ch;
   color: var(--muted);
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 .tag-row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 28px 0;
+  margin: 20px 0;
 }
 
 .tag {
@@ -405,8 +406,8 @@ body.light .mobile-menu {
 .hero-proof {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 20px;
-  margin-top: 26px;
+  gap: 12px 16px;
+  margin-top: 18px;
   color: var(--muted);
   font-size: 0.88rem;
 }
@@ -433,11 +434,11 @@ body.light .mobile-menu {
 
 .hero-card {
   position: relative;
-  padding: 18px;
-  border-radius: 34px;
+  padding: 14px;
+  border-radius: 30px;
   background: linear-gradient(180deg, rgba(11, 16, 27, 0.98), rgba(7, 10, 18, 1));
   border: 1px solid rgba(148, 163, 184, 0.12);
-  box-shadow: 0 36px 80px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.24);
 }
 
 body.light .hero-card {
@@ -447,10 +448,10 @@ body.light .hero-card {
 }
 
 .hero-card-image {
-  border-radius: 26px;
+  border-radius: 24px;
   overflow: hidden;
   aspect-ratio: 0.95;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .hero-card-image img {
@@ -461,7 +462,7 @@ body.light .hero-card {
 
 .hero-card-panel {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   padding: 8px 6px 4px;
 }
 
@@ -484,13 +485,13 @@ body.light .hero-card {
 .hero-mini-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 12px;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .hero-mini-stats div {
-  padding: 14px;
-  border-radius: 20px;
+  padding: 12px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(148, 163, 184, 0.1);
 }
@@ -522,13 +523,13 @@ body.light .hero-mini-stats div {
 
 .info-grid {
   display: grid;
-  gap: 18px;
+  gap: 14px;
 }
 
 .info-card {
   display: flex;
-  gap: 16px;
-  padding: 24px;
+  gap: 12px;
+  padding: 18px;
 }
 
 .info-icon,
@@ -571,9 +572,9 @@ body.light .service-icon {
 .featured-project {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-  gap: 28px;
-  padding: 32px;
-  margin-bottom: 22px;
+  gap: 20px;
+  padding: 24px;
+  margin-bottom: 18px;
 }
 
 .featured-project-eyebrow,
@@ -609,11 +610,20 @@ body.light .service-icon {
 
 .featured-project-panel {
   display: grid;
-  gap: 20px;
-  padding: 26px;
-  border-radius: 24px;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.featured-project-screenshot {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  min-height: 180px;
+  background: rgba(15, 23, 42, 0.08);
 }
 
 body.light .featured-project-panel {
@@ -643,7 +653,7 @@ body.light .featured-project-panel {
 .workflow-grid,
 .trust-grid {
   display: grid;
-  gap: 20px;
+  gap: 16px;
 }
 
 .projects-grid {
@@ -663,15 +673,15 @@ body.light .featured-project-panel {
 }
 
 .project-card {
-  padding: 18px 18px 22px;
+  padding: 16px 16px 18px;
 }
 
 .project-thumb {
   width: 100%;
-  border-radius: 22px;
+  border-radius: 20px;
   overflow: hidden;
-  height: 230px;
-  margin-bottom: 18px;
+  height: 200px;
+  margin-bottom: 14px;
   border: 1px solid rgba(148, 163, 184, 0.1);
 }
 
@@ -715,7 +725,7 @@ body.light .featured-project-panel {
 }
 
 .project-title {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   font-size: 1.4rem;
   line-height: 1.2;
 }
@@ -724,7 +734,7 @@ body.light .featured-project-panel {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 16px 0;
+  margin: 12px 0;
 }
 
 .project-desc,
@@ -737,31 +747,31 @@ body.light .featured-project-panel {
 
 .project-story {
   display: grid;
-  gap: 16px;
-  margin-top: 16px;
+  gap: 12px;
+  margin-top: 14px;
 }
 
 .project-highlights-wrap {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .project-note {
-  margin: 14px 0 0;
+  margin: 12px 0 0;
   color: var(--accent);
 }
 
 .project-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 18px;
+  gap: 10px;
+  margin-top: 14px;
 }
 
 .service-card {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 16px;
-  padding: 24px;
+  gap: 12px;
+  padding: 18px;
 }
 
 .service-copy {
@@ -775,11 +785,11 @@ body.light .featured-project-panel {
 }
 
 .skill-card {
-  padding: 22px;
+  padding: 18px;
 }
 
 .skill-card h4 {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
 }
 
 .skill-items {
@@ -791,8 +801,8 @@ body.light .featured-project-panel {
 .skill-pill {
   display: inline-flex;
   align-items: center;
-  min-height: 34px;
-  padding: 7px 12px;
+  min-height: 30px;
+  padding: 6px 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(148, 163, 184, 0.12);
@@ -806,12 +816,12 @@ body.light .skill-pill {
 }
 
 .workflow-card {
-  padding: 26px;
+  padding: 20px;
 }
 
 .workflow-card span {
   display: inline-flex;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   color: var(--accent);
   font-size: 0.9rem;
   font-weight: 700;
@@ -824,19 +834,19 @@ body.light .skill-pill {
 .about-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.75fr);
-  gap: 28px;
+  gap: 20px;
   align-items: start;
 }
 
 .about-copy {
   display: grid;
-  gap: 18px;
+  gap: 14px;
 }
 
 .about-points {
   display: grid;
-  gap: 12px;
-  margin-top: 22px;
+  gap: 10px;
+  margin-top: 18px;
 }
 
 .about-point {
@@ -860,7 +870,7 @@ body.light .skill-pill {
 }
 
 .trust-panel {
-  padding: 28px;
+  padding: 20px;
 }
 
 .trust-panel h3 {
@@ -907,8 +917,8 @@ body.light .skill-pill {
 .contact-cta {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.95fr);
-  gap: 28px;
-  padding: 32px;
+  gap: 20px;
+  padding: 24px;
 }
 
 .contact-cta-copy h2 {
@@ -928,14 +938,14 @@ body.light .skill-pill {
 
 .contact-list {
   display: grid;
-  gap: 12px;
-  margin-top: 24px;
+  gap: 10px;
+  margin-top: 18px;
 }
 
 .contact-card {
   display: block;
-  padding: 18px 20px;
-  border-radius: 22px;
+  padding: 16px 18px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(148, 163, 184, 0.1);
   transition: transform 0.2s ease, border-color 0.2s ease;
@@ -966,10 +976,10 @@ body.light .contact-card {
 
 .form {
   display: grid;
-  gap: 18px;
+  gap: 14px;
   align-content: start;
-  padding: 28px;
-  border-radius: 26px;
+  padding: 22px;
+  border-radius: 22px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(148, 163, 184, 0.1);
 }
@@ -1048,11 +1058,11 @@ body.light .form textarea {
 }
 
 .footer {
-  padding: 30px 0 40px;
+  padding: 24px 0 28px;
 }
 
 .footer-panel {
-  padding: 28px 30px 22px;
+  padding: 22px 24px 18px;
 }
 
 .footer-grid {
@@ -1226,7 +1236,7 @@ body.light .footer-bottom {
   }
 
   .section {
-    padding: 72px 0;
+    padding: 56px 0;
   }
 
   .nav-links,

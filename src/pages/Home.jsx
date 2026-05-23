@@ -49,7 +49,7 @@ const valuePoints = [
 
 const featuredProject = {
   eyebrow: 'Featured product build',
-  title: 'ToolsHub',
+  title: 'ToolboxHub',
   summary: 'A search-first utility platform that turns scattered micro-tools into a structured product users can actually discover and use.',
   problem:
     'Users needed a faster way to find the right image, PDF, text, calculator, converter, or developer tool without digging through a messy directory experience.',
@@ -64,29 +64,32 @@ const featuredProject = {
     'Supports both direct search landings and category-based browsing.',
     'Shows how I build for usability, discoverability, and growth at the same time.',
   ],
+  imageSrc: '/project-previews/toolbox-hub.png',
+  imageAlt: 'ToolboxHub site preview',
   demo: 'https://www.toolboxhubapp.com/',
   github: 'https://github.com/Ojay1963/toolbox-hub.git',
 }
 
 const projects = [
   {
-    title: 'Delxta',
-    kicker: 'Reservations, ordering, and payments',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Payments'],
+    title: 'Reloc-iq',
+    kicker: 'Free visa and cost-of-living comparison for international moves',
+    tags: ['Next.js', 'React', 'Travel Tech', 'Data Visualization', 'Responsive design'],
     role: 'Full Stack Developer',
-    timeline: 'Restaurant product platform',
-    description: 'A restaurant platform that combines table booking, delivery ordering, online payments, and advance meal scheduling in one customer journey.',
-    problem: 'I built the full flow for reservations, orders, payments, and backend activity management so customers can book or buy without friction.',
-    outcome: 'This matters because the product reduces operational gaps between dine-in planning and digital ordering, creating a more useful customer experience.',
+    timeline: 'Relocation planning and comparison tool',
+    description: 'A free relocation tool that helps users plan moves abroad by checking visa requirements, comparing cost of living across countries, and accessing city guides—all without signup.',
+    problem: 'Moving internationally is overwhelming because people need to research visa options, understand real costs of living, and compare multiple countries—but this information is scattered across different sources.',
+    outcome: 'This matters because a unified tool for visa, cost, and city comparison helps users make confident relocation decisions faster and more clearly.',
     highlights: [
-      'Table reservation flow for dine-in planning',
-      'Ordering and payment experience for delivery and scheduled meals',
-      'Backend support for bookings, food orders, payments, and customer activity',
+      'Instant visa requirement checker for 195 countries',
+      'Real-time cost of living comparisons across destinations',
+      'Side-by-side country and city comparison tools',
+      'Country guides and relocation rankings (cheapest, best for nomads, etc.)',
     ],
-    imageSrc: '/project-previews/delxta.png',
-    imageAlt: 'Screenshot preview of the Delxta restaurant platform',
-    demo: 'https://delxta.vercel.app',
-    github: 'https://github.com/Ojay1963/Delxta.git',
+    imageSrc: '/project-previews/reloc-iq.svg',
+    imageAlt: 'Reloc-iq project preview',
+    demo: 'https://reloc-iq.vercel.app/',
+    github: 'https://github.com/Ojay1963/RelocIQ',
   },
   {
     title: 'Pro-Find',
@@ -106,6 +109,25 @@ const projects = [
     imageAlt: 'Screenshot preview of the Pro-Find real estate marketplace',
     demo: 'https://pro-find-nxw1.vercel.app',
     github: 'https://github.com/Ojay1963/Pro-find.git',
+  },
+  {
+    title: 'Delxta',
+    kicker: 'Reservations, ordering, and payments',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Payments'],
+    role: 'Full Stack Developer',
+    timeline: 'Restaurant product platform',
+    description: 'A restaurant platform that combines table booking, delivery ordering, online payments, and advance meal scheduling in one customer journey.',
+    problem: 'I built the full flow for reservations, orders, payments, and backend activity management so customers can book or buy without friction.',
+    outcome: 'This matters because the product reduces operational gaps between dine-in planning and digital ordering, creating a more useful customer experience.',
+    highlights: [
+      'Table reservation flow for dine-in planning',
+      'Ordering and payment experience for delivery and scheduled meals',
+      'Backend support for bookings, food orders, payments, and customer activity',
+    ],
+    imageSrc: '/project-previews/delxta.png',
+    imageAlt: 'Screenshot preview of the Delxta restaurant platform',
+    demo: 'https://delxta.vercel.app',
+    github: 'https://github.com/Ojay1963/Delxta.git',
   },
   {
     title: 'Naija Tax Calculator',
@@ -144,6 +166,25 @@ const projects = [
     imageAlt: 'Screenshot preview of the Ojay Motors luxury vehicle platform',
     demo: 'https://cars-azure-gamma.vercel.app/',
     github: 'https://github.com/Ojay1963/Cars.git',
+  },
+  {
+    title: 'Pro-Find',
+    kicker: 'Marketplace architecture for property discovery',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Role-based listings'],
+    role: 'Full Stack Developer',
+    timeline: 'Real estate marketplace',
+    description: 'An open property marketplace where agents and owners can pay to list homes while buyers and renters browse with clarity.',
+    problem: 'I built paid listing flows and a clean search experience to support both sides of the marketplace without making discovery harder for house hunters.',
+    outcome: 'This matters because a two-sided marketplace only works when publishing, search, and listing quality feel equally trustworthy.',
+    highlights: [
+      'Paid listing flow for agents and property owners',
+      'Property discovery experience for buyers and renters',
+      'Backend structure for listing management, accounts, and property data',
+    ],
+    imageSrc: '/project-previews/pro-find.png',
+    imageAlt: 'Screenshot preview of the Pro-Find real estate marketplace',
+    demo: 'https://pro-find-nxw1.vercel.app',
+    github: 'https://github.com/Ojay1963/Pro-find.git',
   },
 ]
 
@@ -436,6 +477,14 @@ function Home() {
             </div>
 
             <div className="featured-project-panel">
+              {featuredProject.imageSrc && (
+                <img
+                  className="featured-project-screenshot"
+                  src={featuredProject.imageSrc}
+                  alt={featuredProject.imageAlt || featuredProject.title}
+                  loading="lazy"
+                />
+              )}
               <div>
                 <h4>What I built</h4>
                 <ul className="featured-project-list">
@@ -456,16 +505,18 @@ function Home() {
                 <Button href={featuredProject.demo} variant="primary">
                   Live Demo
                 </Button>
-                <Button href={featuredProject.github} variant="ghost">
-                  GitHub
-                </Button>
+                {featuredProject.github && (
+                  <Button href={featuredProject.github} variant="ghost">
+                    GitHub
+                  </Button>
+                )}
               </div>
             </div>
           </article>
 
           <div className="projects-grid">
-            {projects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
+            {projects.map((project, index) => (
+              <ProjectCard key={`${project.title}-${index}`} project={project} />
             ))}
           </div>
         </div>
