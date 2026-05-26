@@ -61,12 +61,16 @@ body.light .surface {
 
 .section-title {
   margin: 0;
-  max-width: 12ch;
+  max-width: min(28ch, 100%);
   font-family: var(--font-body);
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
   font-weight: 700;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .section-heading-center .section-title,
@@ -593,6 +597,10 @@ body.light .service-icon {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   line-height: 1.1;
   letter-spacing: -0.04em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .featured-project-summary {
